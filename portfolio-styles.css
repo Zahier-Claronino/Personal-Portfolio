@@ -5,7 +5,7 @@ body{
 
 .home{
     height:100vh;
-    background-image:url('/portfolio-background5.jpg');
+    background-image:url('portfolio-background5.jpg');
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;

@@ -1,0 +1,693 @@
+body{
+    margin:0;
+    overflow-x:hidden;
+}
+
+.home{
+    height:741.5px;
+    background-image:url('portfolio-background5.jpg');
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display:flex;
+    align-items: center;;
+    flex-direction:column;            
+}
+
+ .home::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 741.5px;
+    background: rgba(0, 0, 0, 0.7);  
+    z-index: 1;  
+}
+
+.intro, .my-image, .nav-banner {
+    position: relative;
+    z-index: 2; 
+}
+
+
+nav{
+    width:90%;
+    height:60px;
+    background-color:rgba(255, 0, 0, 0.541);
+    margin:15px;
+    border-radius: 15px 15px 15px ;
+    
+    display:flex;
+    align-items:center;
+    justify-content: space-between;
+
+ 
+}
+
+.nav-banner{
+    position: fixed;
+    z-index:3
+}
+
+.nav-banner h1{
+    color:lightblue;
+    font-size:xx-large;
+    font-family:Copperplate, Papyrus, fantasy;
+    animation:spinIn 1.5s ease-in-out;
+    
+} 
+
+@keyframes colors{
+    0%{
+        color:lightblue;
+    }
+    20%{
+        color:maroon;
+    }
+    40%{
+        color:gold;
+    }
+    60%{
+        color:silver;
+    }
+    80%{
+        color:white;
+    }
+    100%{
+        color:lightblue;
+    }
+}
+
+@keyframes spinIn{
+    0%{
+        font-size: 0px;
+        transform: rotateY(360deg);
+    }
+
+}
+
+.hamburger-button{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    gap:6px;
+    width:30px;
+    height:30px;
+    background:transparent;
+    border:none;
+    margin:10px;
+    
+    
+}
+
+#line1, #line2, #line3{
+    background-color:lightblue;
+    width:27px;
+    height:4px;
+    transform-origin: center;
+    transition: transform 0.8s ease-in-out;
+}
+
+.intro{
+    display:flex;flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    height:200px;
+    width:70%;
+}
+
+
+
+h2{
+           
+    
+    color:white;
+    font-family:Copperplate, Papyrus, fantasy;
+    font-size:40px;
+    line-height: 1;
+    text-align: center;
+    animation:slideDown 1s ease-in-out;
+    height:100px;
+    width:100%;
+}
+
+
+@keyframes slideDown{
+    0%{
+        margin-top:-520px;
+    }
+}
+
+
+
+
+
+.intro p{
+    color:white;
+    font-size:26px;
+    text-align: center;
+    font-family:Arial, Helvetica, sans-serif; 
+    animation:appear 2s ease;
+    
+}
+
+@keyframes appear{
+    0%{
+        opacity:0;
+    }
+    50%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+
+.bottom-home{
+    
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+    width:1000px;
+    animation: SlideIn 1.5s ease-in-out;
+}
+
+#about-me{
+    width:150px;
+    height:40px;
+    border-radius:20px 20px 20px;
+    color:white;
+    background-color:rgba(255, 0, 0, 0.9);
+    
+    font-size:medium;
+    border:1px solid white;
+    
+    animation: changeColor 7s ease-in-out infinite;
+    z-index: 4;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    
+    
+    
+}
+
+
+
+@keyframes SlideIn{
+    0%{
+        margin-left:-1500px;
+    }
+}
+
+@keyframes changeColor{
+    0%{
+        background-color: yellow;
+    }
+    20%{
+        background-color:blue;
+    }
+    40%{
+        background-color:orange;
+    }
+    60%{
+        background-color:rgb(15, 0, 68);
+    }
+    75%{
+        background-color:gray;
+    }
+    90%{
+        background-color:maroon
+    }
+    100%{
+        background-color:yellow;
+    }
+}
+
+
+#about-me:hover{
+    cursor: pointer;
+    animation: none;
+    background-color: transparent;
+    color:black;
+    
+}
+
+
+.bottom-home img{
+    animation:appear 2s ease-in-out;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+
+#cv{
+    width:150px;
+    height:40px;
+    border-radius:20px 20px 20px;
+    color:white;
+    background-color:rgba(0, 0, 0, 0.452);
+    z-index:4;
+    font-size:medium;
+    border:1px solid white;
+    animation:opacity 2s ease-in-out;
+    transition: background-color 0.4s ease, color 0.4s ease;
+
+}
+
+@keyframes opacity{
+    0%{
+        opacity:0;
+    }
+    50%{
+        opacity:0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+#cv:hover{
+    cursor: pointer;
+    background-color:lightblue;
+    color:black;
+
+    
+    
+}
+
+
+
+
+@media only screen and (min-height:750px){
+    .home{
+        height:800px;
+    }
+}
+
+.menu{
+    height: 100vh;
+    width:100%;
+    
+    position:fixed;
+    background-image:url('menu-background7.jpg');
+    background-position: center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+}
+
+.menu::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);  
+    z-index: 2;
+}
+
+
+
+
+
+
+/*@keyframes slideMenu{
+    0%{
+        opacity: 0;
+    }
+    25%{
+        opacity: 0.25;
+    }
+    50%{
+        opacity: 0.5;
+    }
+    75%{
+        opacity: 0.75;
+    }
+    100%{
+        opacity: 1;
+    }
+    
+}*/
+
+@keyframes slideMenu{
+    0%{
+        margin-top:990px;
+    }
+}
+
+@keyframes slideMenuBack {
+    0%{
+        margin-top:0px;
+    }
+    100%{
+        margin-top:-990px;
+    }
+}
+
+
+.buttons{
+    display:flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.buttons button{
+    background-color:transparent;
+    color:white;
+    font-size:25px;
+    font-weight:900;
+    border:none;
+    z-index:2;
+
+}
+
+.buttons button:hover{
+    cursor:pointer;
+    color:darkslategray;
+}
+
+.after-home{
+    width:100%;
+    height:100vh;
+    background-image:url('portfolio-background6.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    
+    margin-top:0;
+
+}
+
+.after-home::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.7);  
+    z-index: 1;  
+}
+
+
+
+.bubble {
+    position: absolute;
+    bottom: 0; /* Start at the bottom */
+    width: 10px;
+    height: 10px;
+    background: white; /* Light color for a bubble effect */
+    border-radius: 50%; /* Makes it a circle */
+    animation: floatUp 20s infinite ease-in-out; /* Runs forever */
+    border:2px solid lightblue;
+    position: fixed;
+    z-index: 1;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
+    transform: scale(1.2);
+
+}
+
+
+
+
+@keyframes floatUp {
+    0% { transform: translateY(0); opacity: 1; } /* Start position */
+    50%{
+        opacity: 0.7;
+    }
+    100% { transform: translateY(-1000px); opacity: 0; } /* Move up and disappear */
+}
+
+.about-me{
+    position: relative;
+    z-index: 2;
+    
+}
+
+
+
+.about-me h1{
+    text-align:center;
+    color:white;
+    font-size:40px;
+
+}
+
+.about-s1{
+    display:flex;
+    justify-content: center;
+}
+
+
+.my-journey{
+
+    width:35%;
+}
+
+.my-journey p{
+    color:white;
+    font-size:20px;
+    font-family: monospace;
+}
+
+.languages{
+    display:flex;
+     align-items: center;
+    flex-direction: column;
+    width:35%;
+    text-align: center;
+}
+
+.languages p{
+    color:white;
+}
+
+.html-css{
+    display:flex;
+    justify-content: space-between;
+    width:100%;
+    
+}
+
+.java-c{
+    display:flex;
+    justify-content: space-between;
+    width:70%;
+}
+
+
+
+.javascript{
+    animation:javascriptMove 12s linear infinite;
+}
+@keyframes javascriptMove{
+    0%{
+        transform: translate(0px, 0px);
+
+    }
+    20%{
+        transform: translate(225px, 135px);
+        
+    }
+    40%{
+        transform:translate(145px, 285px);
+        
+    }
+    60%{
+        transform:translate(-145px, 285px);
+        
+    }
+    80%{
+        transform: translate(-225px, 135px);
+    }
+    100%{
+        transform:translate(0px, 0px);
+    }
+
+
+    
+}
+
+
+.html{
+    animation:HTMLMove 12s linear infinite;
+}
+
+@keyframes HTMLMove{
+    0%{
+        transform: translate(0px, 0px);
+
+    }
+    20%{
+        transform: translate(-80px, 150px);
+        
+    }
+
+    40%{
+        transform:translate(-365px, 150px);
+    }
+    60%{
+        transform:translate(-450px, 0px);
+    }
+   80%{
+        transform: translate(-225px, -135px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+
+    }
+    
+}
+
+.java{
+    animation:javaMove 12s linear infinite;
+}
+
+@keyframes javaMove{
+    0%{
+        transform: translate(0px, 0px);
+
+    }
+    20%{
+        transform: translate(-285px, 0PX);
+        
+    }
+
+    40%{
+        transform: translate(-365px, -150px);
+    }
+    60%{
+        transform:translate(-145px, -285px);
+    }
+    80%{
+        transform: translate(80px, -150px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+
+    }
+
+    
+}
+
+.c{
+    animation:CMove 12s linear infinite;
+}
+
+@keyframes CMove{
+    0%{
+        transform: translate(0px, 0px);
+
+    }
+    20%{
+        transform: translate(-80px, -150px);
+        
+    }
+
+    40%{
+        transform:translate(140px, -280px);
+    }
+    60%{
+        transform:translate(365px, -150px);
+    }
+    80%{
+        transform: translate(285px, 0PX);
+    }
+    100%{
+        transform: translate(0px, 0px);
+
+    }
+    
+}
+
+
+.css{
+    animation:CSSMove 12s linear infinite;
+}
+
+@keyframes CSSMove{
+    0%{
+        transform: translate(0px, 0px);
+
+    }
+    20%{
+        transform: translate(225px, -135px);
+        
+    }
+    40%{
+        transform:translate(447.5px, 3px);
+    }
+    60%{
+        transform:translate(365px, 150px);
+    }
+
+    80%{
+        transform: translate(80px, 150px)
+    }
+    100%{
+        transform: translate(0px, 0px);
+
+    }
+    
+}
+
+
+
+
+
+
+/*MEDIA QUERIES START HERE*/
+
+@media only screen and (max-width:1005px){
+    .bottom-home{
+        justify-content:center;
+        width:800px;
+        
+    }
+}
+
+@media only screen and (max-width:805px){
+    .bottom-home{
+        justify-content: space-evenly;
+        width:100%;
+    }
+    .home{
+        height:660px;
+    }
+
+    .home::before{
+        height:660px;
+    }
+
+    #me{
+        display:none;
+    }
+    .intro{
+        height:400px;
+        justify-content: end;
+    }
+}
+
+@media only screen and (max-width:375px){
+    .intro{
+        margin-top:100px;
+    }
+}
+
+@media only screen and (max-width:340px){
+    .home h2{
+        font-size:35px;
+    }
+
+    .intro p{
+        font-size:23px;
+    }
+}

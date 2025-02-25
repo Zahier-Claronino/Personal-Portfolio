@@ -9,9 +9,9 @@ const line3 = document.getElementById('line3');
 
 const navBanner = document.getElementById('nav-banner');
 const navHeading = document.getElementById('nav-heading');
-
+let menuOpen = false;
 menuButton.addEventListener('mouseover', function(){
-    if(menu.style.opacity === '0'){
+    if(!menuOpen){
         line1.style.width ='5px';
         line3.style.width = '5px';
         menuButton.style.cursor = 'pointer';
@@ -40,7 +40,7 @@ menuButton.addEventListener('mouseout', function(){
     
 });
 
-let menuOpen = false;
+
 function showMenu(){
     menuOpen = true;
     menu.style.opacity = '1';

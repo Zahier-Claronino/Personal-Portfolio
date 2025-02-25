@@ -47,7 +47,7 @@ nav{
 
 .nav-banner{
     position: fixed;
-    z-index:3
+    z-index:5;
 }
 
 .nav-banner h1{

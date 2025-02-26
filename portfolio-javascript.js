@@ -9,7 +9,12 @@ const line3 = document.getElementById('line3');
 
 const navBanner = document.getElementById('nav-banner');
 const navHeading = document.getElementById('nav-heading');
+
+const home = document.getElementById('home');
+const afterHome = document.getElementById('after-home');
+const doc = document.getElementsByTagName('html');
 let menuOpen = false;
+
 menuButton.addEventListener('mouseover', function(){
     if(!menuOpen){
         line1.style.width ='5px';
@@ -62,8 +67,6 @@ function showMenu(){
     line1.style.width = '27px';
     line3.style.width = '27px';
     
-    
-    
 }
 
 function hideMenu(){
@@ -79,11 +82,12 @@ function hideMenu(){
     line3.style.transform = 'none';
     navBanner.style.backgroundColor = 'rgba(255, 0, 0, 0.541)';
     navHeading.style.animation = 'none';
-
     setTimeout(function(){
+
         menu.style.opacity = '0';
         menu.style.zIndex = "1";
         menuOpen = false;
+
     }, 250);
     
     
@@ -91,9 +95,11 @@ function hideMenu(){
 
 
 menuButton.addEventListener('click', function(){
+
     if(!menuOpen){
         showMenu();
     }else{
         hideMenu();
     }
+
 });

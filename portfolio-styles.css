@@ -591,9 +591,7 @@ h2{
     100%{
         transform: translate(0px, 0px);
 
-    }
-
-    
+    }  
 }
 
 .c{
@@ -658,7 +656,7 @@ h2{
 }
 
 
-
+/*SMARTPHONE ANIMATION */
 
 
 @keyframes javascriptMoveSmartphone{
@@ -707,6 +705,81 @@ h2{
     }
    80%{
     transform: translate(-110px, -134px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+
+    }
+    
+}
+
+@keyframes javaMoveSmartphone{
+    0%{
+        transform: translate(0px, 0px);
+
+    }
+    20%{
+        transform: translate(-125px, 0PX);
+        
+    }
+    40%{
+        transform: translate(-165px, -145px);
+    }
+    60%{
+        transform:translate(-62.5px, -285px);
+    }
+    80%{
+        transform: translate(80px, -150px);
+    }
+    100%{
+        transform: translate(0px, 0px);
+
+    }  
+}
+
+@keyframes CMoveSmartphone{
+    0%{
+        transform: translate(0px, 0px);
+
+    }
+    20%{
+        transform: translate(-45px, -142px);
+        
+    }
+
+    40%{
+        transform:translate(62.5px, -280px);
+    }
+    60%{
+        transform:translate(165px, -140px);
+    }
+    80%{
+        transform: translate(125px, 0PX);
+    }
+    100%{
+        transform: translate(0px, 0px);
+
+    }
+}
+
+@keyframes CSSMoveSmartphone{
+    0%{
+        transform: translate(0px, 0px);
+
+    }
+    20%{
+        transform: translate(110px, -136px);
+        
+    }
+    40%{
+        transform:translate(215px, 0px);
+    }
+    60%{
+        transform: translate(165px, 145px);
+    }
+
+    80%{
+        transform: translate(45px, 142px);
     }
     100%{
         transform: translate(0px, 0px);
@@ -774,13 +847,13 @@ h2{
         animation:HTMLMoveSmartphone 12s linear infinite;
     }
     .java{
-        animation:none;
+        animation:javaMoveSmartphone 12s linear infinite;
     }
     .c{
-        animation:none;
+        animation:CMoveSmartphone 12s linear infinite;
     }
     .css{
-        animation:none;
+        animation:CSSMoveSmartphone 12s linear infinite;
     }
 }
 

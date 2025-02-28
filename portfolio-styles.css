@@ -818,7 +818,7 @@ nav{
 }
 
 .experience a{
-    color:white;
+    color:lightblue;
 }
 
 .experience a:hover{
@@ -898,6 +898,10 @@ nav{
     .intro{
         height:400px;
         justify-content: end;
+    }
+
+    .experience p{
+        width:100%;
     }
 }
 

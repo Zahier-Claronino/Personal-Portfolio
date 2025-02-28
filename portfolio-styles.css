@@ -847,6 +847,67 @@ nav{
 }
 
 
+.projects-slider{
+    height:600px;
+    background-color:rgba(34, 34, 34, 0.9);
+    display:flex;
+    width:100%;
+    justify-content:flex-start;
+    align-items: center;
+    overflow-x:scroll;    
+    white-space:nowrap;
+    gap:20px;
+}
+
+.project1{
+    height:550px;
+    min-width:365px;
+    background-color:white;
+    display:flex;
+    flex-direction: column;
+    border-radius:15px 15px 15px;
+    overflow: hidden;
+    
+}
+
+.project1 video{
+    
+    width:365px;
+    
+}
+
+.project2{
+    height:400px;
+    min-width:250px;
+    background-color:rgb(255, 0, 0);
+}
+
+.project3{
+    height:400px;
+    min-width:250px;
+    background-color:rgb(0, 0, 0);
+}
+
+.project4{
+    height:400px;
+    min-width:250px;
+    background-color:rgb(21, 255, 12);
+}
+
+.project5{
+    height:400px;
+    min-width:250px;
+    background-color:rgb(166, 0, 255);
+}
+
+.project6{
+    height:400px;
+    min-width:250px;
+    background-color:rgb(255, 158, 231);
+}
+
+
+
 /*MEDIA QUERIES START HERE*/
 
 @media only screen and (max-width:1005px) and (max-height:820px){

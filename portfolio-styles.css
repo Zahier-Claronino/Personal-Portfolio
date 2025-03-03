@@ -189,7 +189,7 @@ nav{
     align-items: center;
 }
 
-#about-me{
+#more-about{
     width:150px;
     height:40px;
     border-radius:20px 20px 20px;
@@ -240,7 +240,7 @@ nav{
 }
 
 
-#about-me:hover{
+#more-about:hover{
     cursor: pointer;
     animation: none;
     background-color: transparent;

@@ -111,19 +111,29 @@ const aboutButton = document.getElementById('about');
 const projectsButton = document.getElementById('projects');
 const contactButton = document.getElementById('contact');
 
+const AboutMeButton = document.getElementById('more-about');
+
 
 const AboutSection = document.getElementById('about-section');
 const ProjectsSection = document.getElementById('projects-section');
 
 
+AboutMeButton.addEventListener('click', function(){
 
+    hideMenu();
+    AboutSection.scrollIntoView({behavior: "smooth"});
+    
+});
 
 aboutButton.addEventListener('click', function(){
     if(menuOpen){
         hideMenu();
         AboutSection.scrollIntoView({behavior: "smooth"});
+        console.log("about me button clicked successfully");
     }
 });
+
+
 
 projectsButton.addEventListener('click', function(){
     if(menuOpen){

@@ -103,3 +103,38 @@ menuButton.addEventListener('click', function(){
     }
 
 });
+
+/*Navigation buttons functions*/
+
+const homeButton = document.getElementById('home-btn');
+const aboutButton = document.getElementById('about');
+const projectsButton = document.getElementById('projects');
+const contactButton = document.getElementById('contact');
+
+
+const AboutSection = document.getElementById('about-section');
+const ProjectsSection = document.getElementById('projects-section');
+
+
+
+
+aboutButton.addEventListener('click', function(){
+    if(menuOpen){
+        hideMenu();
+        AboutSection.scrollIntoView({behavior: "smooth"});
+    }
+});
+
+projectsButton.addEventListener('click', function(){
+    if(menuOpen){
+        hideMenu();
+        ProjectsSection.scrollIntoView({behavior: "smooth"});
+    }
+});
+
+homeButton.addEventListener('click', function(){
+    if(menuOpen){
+        hideMenu();
+        home.scrollIntoView({behavior: "smooth"});
+    }
+});

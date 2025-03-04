@@ -149,6 +149,12 @@ homeButton.addEventListener('click', function(){
     }
 });
 
+const projectsHover = document.getElementById('project-hover');
+
+projectsHover.addEventListener('click', function(){
+    console.log("clicked the project the commit finished.");
+})
+
 
 
 

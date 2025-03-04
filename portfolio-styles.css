@@ -846,6 +846,20 @@ nav{
     background-color:rgba(47, 79, 79, 0.8);
 }
 
+.projects h2{
+    color:white;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.projects h3{
+    margin-top: 0;
+    color:white;
+    text-align: center;
+    font-size:50px;
+    margin-bottom: 0;
+}
+
 
 .projects-slider{
     height:650px;

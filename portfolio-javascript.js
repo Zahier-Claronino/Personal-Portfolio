@@ -129,7 +129,7 @@ aboutButton.addEventListener('click', function(){
     if(menuOpen){
         hideMenu();
         AboutSection.scrollIntoView({behavior: "smooth"});
-        console.log("about me button clicked successfully");
+        
     }
 });
 
@@ -148,3 +148,9 @@ homeButton.addEventListener('click', function(){
         home.scrollIntoView({behavior: "smooth"});
     }
 });
+
+
+
+
+
+

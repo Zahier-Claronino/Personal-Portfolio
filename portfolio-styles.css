@@ -848,7 +848,7 @@ nav{
 
 
 .projects-slider{
-    height:600px;
+    height:650px;
     background-color:rgba(34, 34, 34, 0.9);
     display:flex;
     width:100%;
@@ -868,7 +868,12 @@ nav{
     border-radius:15px 15px 15px;
     overflow: hidden;
     border:1px solid white;
+    position: relative;
     
+}
+
+.project:hover{
+    cursor: pointer;
 }
 
 .languages-used{
@@ -905,6 +910,34 @@ nav{
 
 .project-description a:hover{
     color:lightblue;
+}
+
+.learn-more{
+    display:flex;
+    position:absolute;
+    z-index:4;
+    background-color: rgba(0, 0, 0, 0.5);
+    height:560px;
+    min-width:365px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    border-radius:15px 15px 15px;
+    transition: 0.3s ease-in-out;
+}
+
+.learn-more:hover{
+    opacity: 1;
+}
+
+.learn-more p{
+    color:white;
+    font-size: 22px;
+    font-family: monospace;
+}
+
+.learn-more p:hover{
+    text-decoration:underline;
 }
 
 
@@ -963,6 +996,19 @@ nav{
 
     .experience p{
         width:100%;
+    }
+
+    .project{
+        height:620px;
+        min-width:300px;
+    }
+
+    .learn-more{
+        height:620px;
+        min-width:300px;
+        opacity: 1;
+        align-items: end;
+        background-color: rgba(0, 0, 0, 0.4);
     }
 }
 

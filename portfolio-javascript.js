@@ -116,6 +116,7 @@ const AboutMeButton = document.getElementById('more-about');
 
 const AboutSection = document.getElementById('about-section');
 const ProjectsSection = document.getElementById('projects-section');
+const ContactSection = document.getElementById('contact-section');
 
 
 AboutMeButton.addEventListener('click', function(){
@@ -123,6 +124,13 @@ AboutMeButton.addEventListener('click', function(){
     hideMenu();
     AboutSection.scrollIntoView({behavior: "smooth"});
     
+});
+
+contactButton.addEventListener('click', function(){
+    if(menuOpen){
+        hideMenu();
+        ContactSection.scrollIntoView({behavior: "smooth"});
+    }
 });
 
 aboutButton.addEventListener('click', function(){
@@ -156,7 +164,12 @@ projectsHover.addEventListener('click', function(){
 })
 
 
-
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    alert("Thank you for your message! We'll get back to you soon.");
+    // Optionally, you could reset the form here
+    event.target.reset();
+  });
 
 
 

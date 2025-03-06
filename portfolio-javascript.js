@@ -191,9 +191,13 @@ window.addEventListener('load', function() {
     const loadingScreen = document.getElementById('loading-screen');
     const content = document.getElementById('content');
     
-   // Hide loading screen and display the content
+  /*// Hide loading screen and display the content
     loadingScreen.style.display = 'none';
-    content.style.display = 'block';
+    content.style.display = 'block';*/
+    setTimeout(function() {
+        loadingScreen.style.display = 'none';
+        content.style.display = 'block';
+      }, 500); // Hide after 3 seconds
   });
 
 

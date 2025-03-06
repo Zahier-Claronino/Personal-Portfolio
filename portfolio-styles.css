@@ -1065,7 +1065,7 @@ nav{
     z-index: 9999; /* Ensure it covers everything else */
     background-image: url("loading.gif");
     background-position: center;
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
   }
   
@@ -1194,6 +1194,7 @@ footer {
         max-width:99%;
         min-width: 99%;
     }
+
 }
 
 @media only screen and (max-width:560px){

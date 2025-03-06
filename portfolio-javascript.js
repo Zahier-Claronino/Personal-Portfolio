@@ -201,4 +201,70 @@ window.addEventListener('load', function() {
   });
 
 
+  document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll('.about-me');
 
+    // Create an Intersection Observer
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible'); // Add class when section comes into view
+            }else{
+                entry.target.classList.remove('visible');
+            }
+        });
+    }, {
+        threshold: 0.1// Trigger when 50% of the section is in view
+    });
+
+    // Observe each section
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll('.projects');
+
+    // Create an Intersection Observer
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible'); // Add class when section comes into view
+                
+            }else{
+                entry.target.classList.remove('visible');
+            }
+        });
+    }, {
+        threshold: 0.15// Trigger when 50% of the section is in view
+    });
+
+    // Observe each section
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll('.contact-section');
+
+    // Create an Intersection Observer
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible'); // Add class when section comes into view
+                
+            }else{
+                entry.target.classList.remove('visible');
+            }
+        });
+    }, {
+        threshold: 0.15// Trigger when 50% of the section is in view
+    });
+
+    // Observe each section
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+});

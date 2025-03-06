@@ -445,8 +445,35 @@ nav{
     position: relative;
     z-index: 2;
     height:100%;
-
+    opacity: 0; /* Initially invisible */ /* Initially slightly shifted */
+    transition: opacity 1s ease, transform 1s ease;
     
+    
+}
+.about-me.visible {
+    opacity: 1;
+    animation: aboutSlide 0.5s ease-in-out;
+}
+
+@keyframes aboutSlide{
+    0%{
+        transform:translateX(-500px);
+    }
+    20%{
+        tranform:translateX(-400px);
+    }
+    40%{
+        tranform:translateX(-300px);
+    }
+    60%{
+        tranform:translateX(-200px);
+    }
+    80%{
+        tranform:translateX(-100px);
+    }
+    100%{
+        tranform:translateX(0);
+    }
 }
 
 
@@ -831,6 +858,14 @@ nav{
     z-index: 2;
     width:100%;
     min-height:100vh;
+    opacity: 0; /* Initially invisible */
+    transform: translateY(20px); /* Initially slightly shifted */
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.projects.visible{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 
@@ -956,11 +991,39 @@ nav{
 }
 
 .contact-section{
+    opacity: 0;
    position: relative;
     z-index: 2;
     min-height:100vh;
     width:100%;
     overflow-y: auto;
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.contact-section.visible{
+    opacity: 1;
+    animation: contactSlide 0.5s ease-in-out;
+}
+
+@keyframes contactSlide{
+    0%{
+        transform:translateX(-500px);
+    }
+    20%{
+        tranform:translateX(-400px);
+    }
+    40%{
+        tranform:translateX(-300px);
+    }
+    60%{
+        tranform:translateX(-200px);
+    }
+    80%{
+        tranform:translateX(-100px);
+    }
+    100%{
+        tranform:translateX(0);
+    }
 }
 .contact-section h1{
     color: white;

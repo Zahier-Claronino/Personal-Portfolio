@@ -186,7 +186,9 @@ nav{
     
     height:500px;
     display:flex;
-    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap:10px;
 }
 
 #more-about{
@@ -258,7 +260,7 @@ nav{
 
 
 
-#cv{
+#cv, #transcripts, #reference-letters{
     width:150px;
     height:40px;
     border-radius:20px 20px 20px;
@@ -284,7 +286,7 @@ nav{
     }
 }
 
-#cv:hover{
+#cv:hover, #transcripts:hover, #reference-letters:hover{
     cursor: pointer;
     background-color:lightblue;
     color:black;
@@ -1196,13 +1198,13 @@ nav{
     .bottom-home{
         justify-content: space-evenly;
         width:100%;
-        height:60px;
+        height:100px;
         
     }
 
     .about-me-button, .cv-button{
     
-        height:50px;
+        height:100px;
     }
 
     #me{

@@ -186,5 +186,15 @@ document.querySelector('#contactForm').addEventListener('submit', function(event
     .catch(error => alert("Error: " + error));
 });
 
+window.addEventListener('load', function() {
+    // Hide the loading screen after the page is loaded
+    const loadingScreen = document.getElementById('loading-screen');
+    const content = document.getElementById('content');
+    
+   // Hide loading screen and display the content
+    loadingScreen.style.display = 'none';
+    content.style.display = 'block';
+  });
+
 
 

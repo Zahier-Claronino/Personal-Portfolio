@@ -1244,7 +1244,6 @@ footer {
 
 @media only screen and (max-width:615px){
     .form{
-        border:1px solid white;
         width:99%;
 
     }
@@ -1256,6 +1255,17 @@ footer {
     .form form textarea{
         max-width:99%;
         min-width: 99%;
+    }
+
+    .contact-section.visible{
+        opacity: 1;
+        animation:none;
+    }
+
+    .about-me.visible{
+        opacity: 1;
+        animation:none;
+        
     }
 
 }

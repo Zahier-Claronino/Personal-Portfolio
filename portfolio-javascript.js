@@ -169,7 +169,7 @@ document.querySelector("#contactForm").addEventListener("submit", function (even
     event.preventDefault(); // Prevent default form submission
     
     const form = this;
-    const submitButton = form.querySelector("button[type='submit']");
+    const submitButton = form.querySelector("submit-btn");
     const originalButtonText = submitButton.innerHTML;
 
     // Disable button & show loading text

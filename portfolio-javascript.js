@@ -166,10 +166,10 @@ projectsHover.addEventListener('click', function(){
 
 
 document.querySelector("#contactForm").addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault(); // Prevents default form submission
     
     const form = this;
-    const submitButton = form.querySelector("#submit-btn"); // Corrected selector
+    const submitButton = form.querySelector("#submit-btn"); 
     const originalButtonText = submitButton.innerHTML;
 
     // Disable button & show loading text
@@ -180,25 +180,28 @@ document.querySelector("#contactForm").addEventListener("submit", function (even
 
     fetch("https://formsubmit.co/ajax/zahierclaronino50@gmail.com", {
         method: "POST",
-        headers: {
-            "Accept": "application/json"
-        },
+        headers: { "Accept": "application/json" },
         body: formData
     })
-    .then(response => response.json().then(data => ({ status: response.status, body: data }))) // Get both status & response
-    .then(({ status, body }) => {
-        console.log("Response:", status, body); // Log full response for debugging
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP Error ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log("Server Response:", data); // Log response for debugging
 
-        if (status === 200 && body.success) {
+        if (data.success) {
             alert("Thank you for your message! We'll get back to you soon.");
-            form.reset(); // Reset form after submission
+            form.reset(); // Reset the form
         } else {
-            throw new Error(body.message || "Unknown error occurred");
+            throw new Error(data.message || "Unknown error occurred");
         }
     })
     .catch(error => {
-        console.error("Fetch error:", error);
-        alert("An error occurred. Please check your internet connection or try again later.");
+        console.error("Error:", error);
+        alert("Something went wrong. Please try again later.");
     })
     .finally(() => {
         // Restore button state after sending

@@ -165,6 +165,26 @@ projectsHover.addEventListener('click', function(){
 
 
 
+document.querySelector("#contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevents immediate reload
+
+    const form = this;
+    const formData = new FormData(form);
+
+    fetch(form.action, {
+        method: "POST",
+        headers: { "Accept": "application/json" }, 
+        body: formData
+    })
+    .then(response => response.json()) // Convert response to JSON
+    .then(data => {
+        alert("Your message has been sent!"); // Show alert
+        window.location.reload(); // Reload the page after alert
+    })
+    .catch(error => {
+        alert("Error: Could not send message.");
+    });
+});
 
 window.addEventListener('load', function() {
     // Hide the loading screen after the page is loaded

@@ -165,45 +165,24 @@ projectsHover.addEventListener('click', function(){
 
 
 
-document.querySelector("#contactForm").addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent default form submission
-    
+document.querySelector("#contactForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Prevents immediate reload
+
     const form = this;
-    const submitButton = form.querySelector("[type='submit']"); // Corrected selector
-    const originalButtonText = submitButton.innerHTML;
-
-    // Disable button & show loading text
-    submitButton.disabled = true;
-    submitButton.innerHTML = "Sending...";
-
     const formData = new FormData(form);
 
-    fetch("https://formsubmit.co/ajax/zahierclaronino50@gmail.com", {
+    fetch(form.action, {
         method: "POST",
-        headers: {
-            "Accept": "application/json"
-        },
+        headers: { "Accept": "application/json" }, 
         body: formData
     })
-    .then(response => response.json().then(data => ({ status: response.status, body: data }))) // Get both status & response
-    .then(({ status, body }) => {
-        console.log("Response:", status, body); // Log full response for debugging
-
-        if (status === 200 && body.success) {
-            alert("Thank you for your message! We'll get back to you soon.");
-            form.reset(); // Reset form after submission
-        } else {
-            throw new Error(body.message || "Unknown error occurred");
-        }
+    .then(response => response.json()) // Convert response to JSON
+    .then(data => {
+        alert("Your message has been sent!"); // Show alert
+        window.location.reload(); // Reload the page after alert
     })
     .catch(error => {
-        console.error("Fetch error:", error);
-        alert("An error occurred. Please check your internet connection or try again later.");
-    })
-    .finally(() => {
-        // Restore button state after sending
-        submitButton.disabled = false;
-        submitButton.innerHTML = originalButtonText;
+        alert("Error: Could not send message.");
     });
 });
 

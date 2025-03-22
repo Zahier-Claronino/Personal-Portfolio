@@ -165,25 +165,49 @@ projectsHover.addEventListener('click', function(){
 
 
 
-document.querySelector('#contactForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevents default form submission
+document.querySelector("#contactForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent default form submission
     
-    const formData = new FormData(this);
+    const form = this;
+    const submitButton = form.querySelector("button[type='submit']");
+    const originalButtonText = submitButton.innerHTML;
+
+    // Disable button & show loading text
+    submitButton.disabled = true;
+    submitButton.innerHTML = "Sending...";
+
+    const formData = new FormData(form);
 
     fetch("https://formsubmit.co/ajax/zahierclaronino50@gmail.com", {
         method: "POST",
+        headers: {
+            "Accept": "application/json"
+        },
         body: formData
     })
-    .then(response => response.json())
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+        return response.json();
+    })
     .then(data => {
         if (data.success) {
             alert("Thank you for your message! We'll get back to you soon.");
-            event.target.reset(); // Reset the form after submission
+            form.reset(); // Reset form after submission
         } else {
             alert("Oops! Something went wrong. Please try again.");
         }
     })
-    .catch(error => alert("Error: " + error));
+    .catch(error => {
+        console.error("Fetch error:", error);
+        alert("An error occurred. Please check your internet connection or try again later.");
+    })
+    .finally(() => {
+        // Restore button state after sending
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalButtonText;
+    });
 });
 
 window.addEventListener('load', function() {

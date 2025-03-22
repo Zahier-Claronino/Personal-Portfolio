@@ -964,6 +964,11 @@ nav{
     color:lightblue;
 }
 
+.project a{
+    position: relative;
+    z-index:4;
+}
+
 .learn-more{
     display:flex;
     position:absolute;

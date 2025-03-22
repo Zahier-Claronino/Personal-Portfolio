@@ -169,7 +169,7 @@ document.querySelector("#contactForm").addEventListener("submit", function (even
     event.preventDefault(); // Prevent default form submission
     
     const form = this;
-    const submitButton = form.querySelector("submit-btn");
+    const submitButton = form.querySelector("[type='submit']"); // Corrected selector
     const originalButtonText = submitButton.innerHTML;
 
     // Disable button & show loading text
@@ -185,18 +185,15 @@ document.querySelector("#contactForm").addEventListener("submit", function (even
         },
         body: formData
     })
-    .then(response => {
-        if (!response.ok) {
-            throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json();
-    })
-    .then(data => {
-        if (data.success) {
+    .then(response => response.json().then(data => ({ status: response.status, body: data }))) // Get both status & response
+    .then(({ status, body }) => {
+        console.log("Response:", status, body); // Log full response for debugging
+
+        if (status === 200 && body.success) {
             alert("Thank you for your message! We'll get back to you soon.");
             form.reset(); // Reset form after submission
         } else {
-            alert("Oops! Something went wrong. Please try again.");
+            throw new Error(body.message || "Unknown error occurred");
         }
     })
     .catch(error => {

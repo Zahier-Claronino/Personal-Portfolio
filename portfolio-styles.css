@@ -1055,6 +1055,11 @@ nav{
     width:fit-content;
     height: fit-content;
     
+    
+}
+
+.socials button{
+    text-decoration: underline;
 }
 
 .socials button{
@@ -1068,7 +1073,6 @@ nav{
 }
 
 .socials button:hover{
-    text-decoration: underline lightblue;
     cursor: pointer;
     
 

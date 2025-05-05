@@ -1074,8 +1074,7 @@ nav{
 
 .socials button:hover{
     cursor: pointer;
-    
-
+    color:lightblue;
 }
 
 .socials img:hover{

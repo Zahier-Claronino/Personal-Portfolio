@@ -297,7 +297,7 @@ const ReadMoreButton = document.getElementById('more-info');
 const MoreInfo = document.getElementById('more-info-section');
 
 const NotesDescription = document.getElementById('notes-description');
-let flag = false;
+let flag = true;
 
 ReadMoreButton.addEventListener('click', function(){
     if(flag === true){

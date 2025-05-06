@@ -1242,6 +1242,10 @@ nav{
     .learn-more p{
         text-decoration:underline;
     }
+
+    .more-info-section{
+        opacity:0;
+    }
 }
 
 footer {
@@ -1321,4 +1325,37 @@ footer {
 
 span{
     background-color: blueviolet;
+}
+
+
+#more-info{
+    background-color:transparent;
+    border:none;
+    color:white;
+    position: relative;
+    z-index:5;
+}
+
+.more-info-section p{
+    font-family: monospace;
+    font-size: 15px;
+}
+
+#more-info:hover{
+    cursor:pointer;
+    color:lightblue;
+}
+
+.more-info-section{
+    position: absolute;
+    z-index: 2;
+    color:white;
+    background-color:rgba(0, 0, 0, 0.8);
+    display:flex;
+    align-items:center;
+    text-align:center;
+    height:100%;
+
+    
+    
 }

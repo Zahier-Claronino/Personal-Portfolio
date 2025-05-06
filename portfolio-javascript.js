@@ -293,4 +293,26 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
+const ReadMoreButton = document.getElementById('more-info');
+const MoreInfo = document.getElementById('more-info-section');
+
+const NotesDescription = document.getElementById('notes-description');
+let flag = false;
+
+ReadMoreButton.addEventListener('click', function(){
+    if(flag === true){
+        flag = false;
+        MoreInfo.style.opacity = "1";
+        MoreInfo.style.zIndex = '4';
+        ReadMoreButton.innerText = "Read Less";
+    }
+    else if(flag === false){
+        flag = true;
+        MoreInfo.style.opacity = "0";
+        MoreInfo.style.zIndex = '2';
+        ReadMoreButton.innerText = "Read More";
+    }
+    
+});
+
 

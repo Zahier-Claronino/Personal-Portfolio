@@ -1165,7 +1165,7 @@ nav{
 
 @media only screen and (max-height:750px){
     .bottom-home{
-        height:50%;
+        align-items: center;
     }
 }
 

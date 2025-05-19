@@ -179,6 +179,7 @@ nav{
     animation: SlideIn 1.5s ease-in-out;
     position: relative;
     z-index: 2;
+    border:1px solid white;
 }
 
 .about-me-button, .cv-button{
@@ -251,6 +252,7 @@ nav{
     animation:appear 2s ease-in-out;
     position: relative;
     z-index: 2;
+    border:1px solid red;
 }
 
 

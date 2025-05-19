@@ -16,6 +16,7 @@ body{
     align-items: center;;
     flex-direction:column;          
     position: relative;  
+    gap:0px;
 }
 
  .home::before {
@@ -173,13 +174,14 @@ nav{
 .bottom-home{
     
     display:flex;
-    align-items: end;
+    align-items: start;
     justify-content: space-between;
     width:1000px;
     animation: SlideIn 1.5s ease-in-out;
     height:100%;
     position: relative;
     z-index: 2;
+    border:1px solid white;
 }
 
 .about-me-button, .cv-button{

@@ -16,6 +16,7 @@ body{
     align-items: center;;
     flex-direction:column;          
     position: relative;  
+    border :1px solid white;
 }
 
  .home::before {
@@ -179,6 +180,7 @@ nav{
     animation: SlideIn 1.5s ease-in-out;
     position: relative;
     z-index: 2;
+    border:1px solid red;
 }
 
 .about-me-button, .cv-button{
@@ -188,6 +190,7 @@ nav{
     justify-content: center;
     flex-direction: column;
     gap:10px;
+    border:1px solid black;
 }
 
 #more-about{
@@ -251,6 +254,7 @@ nav{
     animation:appear 2s ease-in-out;
     position: relative;
     z-index: 2;
+    border:1px solid yellow;
 }
 
 

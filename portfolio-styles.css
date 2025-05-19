@@ -1163,11 +1163,6 @@ nav{
 
 /*MEDIA QUERIES START HERE*/
 
-@media only screen and (max-height:750px){
-    .bottom-home{
-        align-items: center;
-    }
-}
 
 @media only screen and (max-width:1005px) and (max-height:820px){
     .bottom-home{

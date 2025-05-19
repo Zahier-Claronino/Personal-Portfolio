@@ -16,7 +16,6 @@ body{
     align-items: center;;
     flex-direction:column;          
     position: relative;  
-    gap:0px;
 }
 
  .home::before {
@@ -178,15 +177,13 @@ nav{
     justify-content: space-between;
     width:1000px;
     animation: SlideIn 1.5s ease-in-out;
-    height:100%;
     position: relative;
     z-index: 2;
-    border:1px solid white;
 }
 
 .about-me-button, .cv-button{
     
-    height:500px;
+    height:400px;
     display:flex;
     justify-content: center;
     flex-direction: column;
@@ -205,10 +202,7 @@ nav{
     
     animation: changeColor 7s ease-in-out infinite;
     z-index: 2;
-    transition: background-color 0.4s ease, color 0.4s ease;
-    
-    
-    
+    transition: background-color 0.4s ease, color 0.4s ease;  
 }
 
 
@@ -300,11 +294,7 @@ nav{
 
 
 
-@media only screen and (min-height:750px){
-    .home{
-        height:800px;
-    }
-}
+
 
 .menu{
     height: 100vh;

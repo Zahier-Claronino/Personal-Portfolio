@@ -31,7 +31,7 @@ body{
 
 .intro, .my-image, .nav-banner {
     position: relative;
-    z-index: 2; 
+    z-index: 3; 
 }
 
 
@@ -178,7 +178,7 @@ nav{
     width:1000px;
     animation: SlideIn 1.5s ease-in-out;
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 .about-me-button, .cv-button{
@@ -201,7 +201,7 @@ nav{
     border:1px solid white;
     
     animation: changeColor 7s ease-in-out infinite;
-    z-index: 2;
+    z-index: 3;
     transition: background-color 0.4s ease, color 0.4s ease;  
 }
 
@@ -437,7 +437,7 @@ nav{
 
 .about-me{
     position: relative;
-    z-index: 2;
+    z-index: 3;
     height:100%;
     opacity: 0; /* Initially invisible */ /* Initially slightly shifted */
     transition: opacity 1s ease, transform 1s ease;

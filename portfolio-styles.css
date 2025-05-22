@@ -418,7 +418,7 @@ nav{
     animation: floatUp 20s infinite ease-in-out; /* Runs forever */
     border:2px solid lightblue;
     position: fixed;
-    z-index: 1;
+    z-index: 2;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.8);
     transform: scale(1.2);
 

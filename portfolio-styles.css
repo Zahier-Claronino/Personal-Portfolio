@@ -5,7 +5,6 @@ body{
     scrollbar-gutter: stable;
     transition: all 0.3s ease-in-out;
 }
-
 .home{
     min-height:100vh;
     background-image:url('portfolio-background5.webp');
@@ -52,6 +51,7 @@ nav{
 .nav-banner{
     position: fixed;
     z-index:5;
+    margin-bottom:0;
 }
 
 .nav-banner h1{
@@ -154,6 +154,8 @@ nav{
     text-align: center;
     font-family:Arial, Helvetica, sans-serif; 
     animation:appear 2s ease;
+    margin-top:0;
+    height:30px;
     
 }
 
@@ -188,6 +190,7 @@ nav{
     justify-content: center;
     flex-direction: column;
     gap:10px;
+
 }
 
 #more-about{
@@ -1154,14 +1157,20 @@ nav{
   }
 
 /*MEDIA QUERIES START HERE*/
-
+@media only screen and (min-height:742px){
+    .bottom-home{
+        height:500px;
+        align-items: end;
+    }
+}
 
 @media only screen and (max-width:1005px) and (max-height:820px){
     .bottom-home{
         justify-content:center;
         width:800px;
-        height:60%;
+
     }
+
 }
 
 @media only screen and (max-width:1005px) {

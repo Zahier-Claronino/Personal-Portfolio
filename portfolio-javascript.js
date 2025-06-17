@@ -220,7 +220,6 @@ window.addEventListener('load', function() {
     content.style.display = 'block';*/
     setTimeout(function() {
         loadingScreen.style.display = 'none';
-        content.style.display = 'block';
       }, 500); // Hide after 3 seconds
   });
 

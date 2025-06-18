@@ -1162,13 +1162,6 @@ nav{
         height:500px;
         align-items: end;
     }
-    .about-me-button, .cv-button{
-        height:1500px;
-        justify-content: end;
-        margin-top:300px;
-
-    }
-}
 
 
 @media only screen and (max-width:1005px) and (max-height:820px){

@@ -1167,7 +1167,8 @@ nav{
 @media only screen and (min-height:742px) and (max-width:805){
     .about-me-button, .cv-button{
         height:700px;
-        
+        justify-content: end;
+
     }
 }
 

@@ -1163,9 +1163,8 @@ nav{
         align-items: end;
     }
     .about-me-button, .cv-button{
-        height:700px;
+        height:1000px;
         justify-content: end;
-        border:2px solid white;
 
     }
 }

@@ -1168,6 +1168,7 @@ nav{
     .about-me-button, .cv-button{
         height:700px;
         justify-content: end;
+        border:2px solid white;
 
     }
 }

@@ -1160,11 +1160,12 @@ nav{
   }
 
 /*MEDIA QUERIES START HERE*/
-@media only screen and (min-height:742px){
+@media only screen and (min-height:743px){
     .bottom-home{
         height:500px;
         align-items: end;
     }
+
 }
 
 

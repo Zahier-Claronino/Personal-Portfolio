@@ -150,6 +150,11 @@ projectsButton.addEventListener('click', function(){
     }
 });
 
+const projects2Button = document.getElementById('projects2');
+projects2Button.addEventListener('click', function(){
+    ProjectsSection.scrollIntoView({behavior: "smooth"});;
+})
+
 homeButton.addEventListener('click', function(){
     if(menuOpen){
         hideMenu();
@@ -313,5 +318,97 @@ ReadMoreButton.addEventListener('click', function(){
     }
     
 });
+
+
+const waveText = document.querySelector('.text-wave');
+const chars = waveText.textContent.split('');
+
+waveText.innerHTML = chars.map((char, i) =>
+  `<span style="animation-delay: ${i * 0.1}s">${char}</span>`
+).join('');
+
+const aboutButton2 = document.getElementById('about-me2');
+const educationBtn = document.getElementById('education');
+const experienceBtn = document.getElementById('experience');
+
+const educationSection = document.getElementById('education-section');
+const aboutMeSection = document.getElementById('about-me-section');
+const experienceSection = document.getElementById('experience-section');
+
+
+educationSection.style.display = 'none';
+experienceSection.style.display = 'none'
+
+let aboutFlag = false;
+let experienceFlag = false;
+aboutButton2.classList.add('active-gradient-border');
+
+educationBtn.addEventListener('click', function(){
+    aboutFlag = true;
+    experienceFlag = false;
+    if(aboutFlag===true  && experienceFlag===false){
+        
+        
+        educationSection.style.animation = '1s cardFlip ease';
+        aboutMeSection.style.display = 'none';
+        experienceSection.style.display = 'none';
+        educationSection.style.display = 'flex';
+        aboutButton2.style.animation = 'none';
+
+        experienceBtn.style.animation = 'none'
+
+        educationBtn.style.animation = 'flicker 0.3s infinite alternate';
+
+        educationBtn.classList.add('active-gradient-border');
+        aboutButton2.classList.remove('active-gradient-border');
+        experienceBtn.classList.remove('active-gradient-border');
+    }
+    
+});
+
+aboutButton2.addEventListener('click', function(){
+    aboutFlag = false;
+    experienceFlag = false;
+    if(aboutFlag===false && experienceFlag===false){
+        
+        aboutMeSection.style.animation = '1s cardFlip ease';
+        educationSection.style.display = 'none';
+        experienceSection.style.display = 'none';
+        aboutMeSection.style.display = 'block';
+        
+        educationBtn.style.animation = 'none';
+        experienceBtn.style.animation = 'none';
+        
+        aboutButton2.style.animation = 'flicker 0.3s infinite alternate';
+
+        aboutButton2.classList.add('active-gradient-border');
+        educationBtn.classList.remove('active-gradient-border');
+        experienceBtn.classList.remove('active-gradient-border');
+    }
+});
+
+experienceBtn.addEventListener('click', function(){
+    experienceFlag = true;
+    if(experienceFlag===true){
+        experienceSection.style.animation = '1s cardFlip ease';
+        educationSection.style.display = 'none';
+        aboutMeSection.style.display = 'none';
+        experienceSection.style.display = 'flex';
+        experienceBtn.style.animation = 'flicker 0.3s infinite alternate';
+        aboutButton2.style.animation = 'none';
+        educationBtn.style.animation = 'none';
+        experienceBtn.classList.add('active-gradient-border');
+        educationBtn.classList.remove('active-gradient-border');
+        aboutButton2.classList.remove('active-gradient-border');
+        console.log(experienceBtn);
+    }
+})
+    
+        
+
+
+
+
+
 
 

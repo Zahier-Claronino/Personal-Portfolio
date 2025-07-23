@@ -10,7 +10,6 @@
     <meta name="description" content="Portfolio Website of Zahier Claronino">
     <meta name="keywords" content="Zahier, Claronino, Portfolio, Web Developer, Zahier Claronino, Software Developer">
     <link rel="stylesheet" href="portfolio-styles.css" >
-
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EDYJWEDB8R"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
@@ -22,6 +21,9 @@
     
 (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="UGPPh0e0vkHDww6zvfOWH";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
 </script>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
     
 </head>
 
@@ -51,17 +53,19 @@
                     <div class="line2" id="line2"></div>
                     <div class="line3" id="line3"></div>
                 </button>
-            </nav><br><br><br><br><br><br><br>
-
+            </nav><br><br><br><br>
+            
             <div class="intro">
-                <h2>
-                    Hi! I'm Zahier Claronino, 
+                <h2><span class="wave">👋</span>
+                    <span class="text-wave">Hi!&nbsp;I'm&nbsp; Zahier&nbsp; <br>Claronino</span> 
+
                 </h2>
                 <p>
-                    a Front-End Web Developer and aspiring Software Developer
-                    specializing in building visually captivating, user-friendly, 
+                    a Front-End Web/Software Developer<br>
+                    specializing in building visually captivating, user-friendly,<br>
                     and responsive websites.
                 </p>
+
                 
             </div>
 
@@ -105,18 +109,90 @@
                     <div class="about-heading">
                         <h1>About Me</h1>
                     </div>
+                    <h2 id="emerging-developer">Emerging Software Developer and Problem Solver</h2>
+                    <div class="education-about">
+                        <button class="button-with-border" id="about-me2">Who I am</button>|
+                        <button class="button-with-border" id="education">Education</button>
+                        <button class="button-with-border" id="experience">Experience</button>
+                    </div><br>
                     <div class="about-s1">
-                        <div class="my-journey">
-                            <p>I recently graduated and have experience with languages like JavaScript, HTML, CSS, C#, and Java.
-                                I've worked with source control systems like Git and have some experience with SQL and database 
-                                management using tools like SSMS and Oracle. My background includes web and software development
-                                through coursework, personal projects, and real-world web development experience, with a focus on
-                                front-end development, so if you need a
-                                website dont hesitate to contact me I'm currently expanding my knowledge in backend technologies, learning React
-                                and Node.js, to become a full-stack software engineer.<span> I'm seeking internship opportunities or entry level job opportunities</span> to apply
-                                my skills in real-world projects and further grow as a developer. Additionally, I have experience with
-                                .NET MAUI app development. Im a very curious person so learning how things work is in my nature. It is specifically my curiosity and 
-                                love for technology that got me into coding, my passion for problem solving is a bonus. </p>
+                        
+                        <div class="my-journey" id="about-me-section">
+                            <div class="about-heading2">
+                                <h2>Who I am</h2>
+                            </div>
+                            <p>Hi, I’m Zahier Claronino — a curious and driven developer with a passion for front-end development and an ever-growing love for full-stack engineering. I recently graduated and have hands-on experience with JavaScript, HTML, CSS, C#, Java, and SQL, along with tools like Git, SSMS, Oracle, and .NET MAUI.<br><br>
+
+Through coursework, personal projects, and real-world experience (including building a live landing page for a transportation company), I’ve developed a strong foundation in web and software development. I'm currently expanding into backend technologies by learning Node.js and React to become a full-stack developer.<br><br>
+
+Right now, I’m completing a learnership with CapaCiTi where I'm deepening my skills in data engineering, data science, and database administration. I’m actively looking for a host placement or internship opportunity to apply my skills in a professional environment and grow as both a developer and a teammate.
+
+If you're looking for someone who's passionate about tech, eager to learn, and ready to make an impact — let’s talk. </p>
+                        </div>
+                        <div class="education-section" id="education-section">
+                            <div class="education-heading">
+                                <h2>Education</h2>
+                            </div>
+
+                            <div class="capaciti">
+                                  <h3>Capaciti Tech Accelerator</h3>
+
+                                  <p id="capaciti-year">2024 - Present</p>
+
+                                  <p id="capaciti-explanation">Currently completing a learnership program focused on practical software development skills, professional development, and work readiness.</p>
+                            </div>
+
+                            <div class="CTU">
+                                  <h3>NQF Level 5 National Certificate –<br> Software Development</h3>
+
+                                  <p id="CTU-year">Feb 2023 - Dec 2024</p>
+
+                                  <p id="college">CTU Training Solutions</p>
+
+                            </div>
+
+                            <div class="school">
+                                  <h3>National Senior Certificate (Matric)</h3>
+
+                                  <p id="matric-year">2017</p>
+
+                                  <p id="school">Oude Molen Technical High School</p>
+                            </div><br><br>
+
+                        </div>
+
+                         <div class="experience-section" id="experience-section">
+                            <div class="experience-heading">
+                                <h2>Experience</h2>
+                            </div>
+
+                            <div class="capaciti">
+                                  <h3>CapaCiTi Tech Career Accelerator</h3>
+
+                                  <p id="capaciti-year">2024 - Present</p>
+
+                                  <p id="capaciti-explanation">data analysis, visualization, and interpretation.using tools like Excel, SQL, and Python to turn raw data into meaningful insights that drive decision-making.
+
+</p>
+                            </div>
+
+                            <div class="CTU">
+                                  <h3>Freelance Web Developer</h3>
+
+                                  <p id="CTU-year">Dec 2024 - Feb 2025</p>
+
+                                  <p id="college">Created a landing page for a startup transportation company called SPTG Transport</p>
+
+                            </div>
+
+                            <div class="school">
+                                  <h3>Personal Projects</h3>
+
+                                  <p id="matric-year">2023 - Present</p>
+
+                                  <p id="school">Gianed experience in doing personal projects over the years to go to projects <button class="button-with-border" id="projects2">Click Here</button></p>
+                            </div><br><br>
+
                         </div>
                         <div class="languages">
                             <div class="javascript">
@@ -148,18 +224,133 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div><br><br>
+                    
+                   <div class="skills">
+                        
+                        <div class="software">
+                            <h2>💻Development Toolkit</h2>
+                            <div class="software-inner">
+                                
 
-                    <div class="experience">
-                        <h2>Experience</h2>
+                                <div class="git">
+                                    <div class="brain-icon"><p id="problem-solving-icon">🐙</p></div>
+                                    <h3>Git and Github</h3>
+                                    <p>  I keep my projects clean and collaborative with meaningful commits, organized branches,
+                                         and well-managed pull requests. Version control isn't just a tool — it's part of how I think as a dev.</p>
+                                </div>
 
-                        <p>I worked on a security company website (link here:<a href="https://hishaamluddy.github.io/ASAtest/" target="_blank">African Security Agency</a>) and am currently developing a transportation company website, gaining real-world web development 
-                            experience. In addition, I have built software development projects, including a Task Manager application in Java, as part of my coursework.
-                             While I may not have extensive experience, I am eager to learn from industry professionals and continuously improve my problem-solving 
-                             skills.I am actively seeking software engineering/software development internships to apply my knowledge and grow in a professional setting.
-                        </p>
-                    </div>
-                </section>
+                                <div class="vs-code">
+                                    <div class="brain-icon"><p id="problem-solving-icon">🔧</p></div>
+                                    <h3>Visual Studio Code</h3>
+                                    <p>My main coding hub. It’s fully customized with themes, snippets, and extensions to match my style and speed.  </p>
+                                </div>
+
+                                <div class="npm">
+                                    <div class="brain-icon"><p id="problem-solving-icon">📦</p></div>
+                                    <h3>NPM</h3>
+                                    <p>Scripts, packages, dependencies — I use NPM every day to manage the behind-the-scenes of my projects.</p>
+                                </div>
+                                <div class="postman">
+                                    <div class="brain-icon"><p id="problem-solving-icon">🧪</p></div>
+                                    <h3>Postman</h3>
+                                    <p>Scripts, packages, dependencies — I use NPM every day to manage the behind-the-scenes of my projects.</p>
+                                </div>
+
+                                <div class="microsoft">
+                                    <div class="brain-icon"><p id="problem-solving-icon">📦</p></div>
+                                    <h3>Microsoft 365</h3>
+                                    <p>Whether it’s documenting project flows in Word, building reports in Excel,
+                                         or collaborating through Teams, I use it daily for planning and teamwork.</p>
+                                </div>
+
+                                <div class="ssms">
+                                    <div class="brain-icon"><p id="problem-solving-icon">🗃️</p></div>
+                                    <h3>SQL Server Management Studio</h3>
+                                    <p>My go-to for working with SQL Server databases — smooth querying, table design, and schema management.</p>
+                                </div>
+                                <div class="netbeans">
+                                    <div class="brain-icon"><p id="problem-solving-icon">🧰</p></div>
+                                    <h3>NetBeans</h3>
+                                    <p>I use NetBeans for Java development when I need a solid, no-nonsense IDE with great debugging tools.</p>
+                                </div>
+                                <div class="firebase">
+                                    <div class="brain-icon"><p id="problem-solving-icon">🔥</p></div>
+                                    <h3>Firebase</h3>
+                                    <p>I lean on Firebase for quick auth, hosting, and real-time databases — it really speeds up MVPs and prototypes.</p>
+                                </div>
+                                <div class="responsive-design">
+                                    <div class="brain-icon"><p id="problem-solving-icon">📲</p></div>
+                                    <h3>Responsive Web Design</h3>
+                                    <p>Making sure everything looks clean on mobile, tablet, and desktop — no pinching required.</p>
+                                </div>
+
+                                <div class="api">
+                                    <div class="brain-icon"><p id="problem-solving-icon">🌐</p></div>
+                                    <h3>RESTful API Design</h3>
+                                    <p>Designing, calling, and handling API requests with clarity — GET, POST, PATCH? I speak fluent HTTP.
+                                        Making sure everything looks clean AF on mobile, tablet, and desktop — no pinching required.</p>
+                                </div>
+                            
+                            </div>
+                        </div>
+
+                        
+                        <div class="soft-skills">
+                            <h2>💡Soft Skills</h2>
+                            <div class="soft-skills-inner">
+                                
+                                <div class="problem-solving">
+                                    <div class="brain-icon"><p id="problem-solving-icon">🧠</p></div>
+                                    <h3>Problem-Solving</h3>
+                                    <p> Strong analytical skills with ability to break down complex problems into manageable solutions</p>
+                                </div>
+                                <div class="communication">
+                                    <div class="brain-icon"><p id="problem-solving-icon">🗣️ </p></div>
+                                    <h3>Communication</h3>
+                                    <p>I can explain technical jargon in plain English and keep my docs clear, useful, and straight to the point. </p>
+                                </div>
+
+                                <div class="teamwork">
+                                    <div class="brain-icon"><p id="problem-solving-icon">🤝  </p></div>
+                                    <h3>Teamwork</h3>
+                                    <p>I work well with others, value feedback, and know when to lead or support to get things done.</p>
+                                </div>
+
+                                <div class="time-management">
+                                    <div class="brain-icon"><p id="problem-solving-icon">⏱️  </p></div>
+                                    <h3>Time Management</h3>
+                                    <p>I stay organized, meet deadlines, and balance quality with speed — even when things get hectic.
+</p>
+                                </div>
+
+                                <div class="adaptability">
+                                    <div class="brain-icon"><p id="problem-solving-icon">🚀 </p></div>
+                                    <h3>Adaptability</h3>
+                                    <p>I stay organized, meet deadlines, and balance quality with speed — even when things get hectic.
+</p>
+                                </div>
+                                <div class="emotional-intelligence">
+                                    <div class="brain-icon"><p id="problem-solving-icon">🚀 </p></div>
+                                    <h3>Emotional Intelligence</h3>
+                                    <p>I stay calm under pressure, handle stress well, and bring positive energy to any team dynamic.</p>
+                                </div>
+
+                                <div class="attention-to-detail">
+                                    <div class="brain-icon"><p id="problem-solving-icon">🔍</p></div>
+                                    <h3>Attention to Detail</h3>
+                                    <p>I notice the little things — whether it's a typo in code or an off alignment in the UI.</p>
+                                </div>
+
+                                <div class="self-motivation">
+                                    <div class="brain-icon"><p id="problem-solving-icon">🎯</p></div>
+                                    <h3>Self-Motivation</h3>
+                                    <p>I'm always learning, building side projects, and leveling up my skills with the aim to improve myself</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </section><br><br><br>
                 <section class="projects" id="projects-section">
                     <div class="projects-heading">
                         <h1>Projects</h1>
@@ -381,3 +572,5 @@
     <script src="portfolio-javascript.js" ></script>
 </body>
 </html>
+
+

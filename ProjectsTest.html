@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio Projects – Cinematic Scroll (6 Projects)</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+      background-color: #111;
+      color: #fff;
+      overflow-x: hidden;
+    }
+
+    .cinematic-gallery {
+      width: 100%;
+    }
+
+    .project-frame {
+      position: relative;
+      height: 100vh;
+      background-image: var(--img);
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 1s ease;
+      will-change: transform;
+    }
+
+    .project-frame .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(2px);
+      z-index: 1;
+    }
+
+    .project-frame .content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      animation: fadeUp 1s ease forwards;
+      transform: translateY(40px);
+      opacity: 0;
+      max-width: 600px;
+      padding: 0 1rem;
+    }
+
+    .project-frame h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .project-frame p {
+      font-size: 1.2rem;
+      opacity: 0.85;
+    }
+
+    .project-frame.in-view .content {
+      animation: fadeUp 1s ease forwards;
+    }
+
+    .project-frame.in-view {
+      transform: scale(1.05);
+    }
+
+    @keyframes fadeUp {
+      from {
+        transform: translateY(40px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cinematic-gallery">
+    <section class="project-frame" style="--img: url('https://source.unsplash.com/800x600/?technology');">
+      <div class="overlay"></div>
+      <div class="content">
+        <h2>Project Nova</h2>
+        <p>A futuristic app to time travel your data.</p>
+      </div>
+    </section>
+
+    <section class="project-frame" style="--img: url('https://source.unsplash.com/800x600/?code');">
+      <div class="overlay"></div>
+      <div class="content">
+        <h2>Codeverse</h2>
+        <p>Explore the universe of code in one place.</p>
+      </div>
+    </section>
+
+    <section class="project-frame" style="--img: url('https://source.unsplash.com/800x600/?ai');">
+      <div class="overlay"></div>
+      <div class="content">
+        <h2>AI Lens</h2>
+        <p>Let artificial intelligence do the thinking.</p>
+      </div>
+    </section>
+
+    <section class="project-frame" style="--img: url('https://source.unsplash.com/800x600/?robotics');">
+      <div class="overlay"></div>
+      <div class="content">
+        <h2>RoboCraft</h2>
+        <p>Building bots for a smarter tomorrow.</p>
+      </div>
+    </section>
+
+    <section class="project-frame" style="--img: url('https://source.unsplash.com/800x600/?space');">
+      <div class="overlay"></div>
+      <div class="content">
+        <h2>StellarMap</h2>
+        <p>Navigate the cosmos like a pro.</p>
+      </div>
+    </section>
+
+    <section class="project-frame" style="--img: url('https://source.unsplash.com/800x600/?cybersecurity');">
+      <div class="overlay"></div>
+      <div class="content">
+        <h2>SafeNet</h2>
+        <p>Securing your digital world 24/7.</p>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const frames = document.querySelectorAll('.project-frame');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in-view');
+        } else {
+          entry.target.classList.remove('in-view');
+        }
+      });
+    }, {
+      threshold: 0.5
+    });
+
+    frames.forEach(frame => observer.observe(frame));
+  </script>
+
+</body>
+</html>

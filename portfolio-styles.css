@@ -1241,6 +1241,10 @@ text-shadow:
     animation: gradientShift 3s ease infinite, tilt 3s ease-in-out infinite;
     transform: scale(1.03);
     color: #fff;
+    box-shadow:
+    0 0 8px #0ff,      /* outer glow */
+    0 0 16px #0ff,     /* stronger glow for cyberpunk feel */
+    inset 0 0 6px #0ff; /* subtle inner glow */
 }
 
 
@@ -1278,6 +1282,10 @@ text-shadow:
     animation: gradientShift 3s ease infinite, tilt 3s ease-in-out infinite;
     transform: scale(1.03);
     color: #fff;
+    box-shadow:
+    0 0 8px #0ff,      /* outer glow */
+    0 0 16px #0ff,     /* stronger glow for cyberpunk feel */
+    inset 0 0 6px #0ff; /* subtle inner glow */
 
 }
 @keyframes gradientShift {

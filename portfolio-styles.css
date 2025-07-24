@@ -128,7 +128,7 @@ nav{
 
 
 
-.intro h2{
+.intro h2, .certificates-section h2{
            
     
     font-family: 'Orbitron', sans-serif; /* retro-futuristic arcade font */
@@ -225,14 +225,14 @@ text-shadow:
 
 
 .bottom-home{
-    
     display:flex;
-    align-items: start;
+    align-items: end;
     justify-content: space-between;
     width:1000px;
     animation: SlideIn 1.5s ease-in-out;
     position: relative;
     z-index: 3;
+    height:300px;
 }
 
 .about-me-button, .cv-button{
@@ -556,7 +556,7 @@ text-shadow:
 
 }
 
-#emerging-developer {
+#emerging-developer, .certificates-section h3 {
     width:100%;
     font-family: 'Audiowide', cursive;
     font-size: 2rem;
@@ -567,7 +567,6 @@ text-shadow:
     0 0 1px #e879f9,
     0 0 3px #d94df5,
     0 0 5px #b84cf1;
-    padding-bottom: 0.5rem;
     display: inline-block;
     text-align: center;
 
@@ -1369,6 +1368,45 @@ text-shadow:
     margin-top:1;
 }
 
+.ai-certs{
+    height:600px;
+    border:1px solid white;
+    display:flex;
+    flex-direction: column;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%; /* Set as per requirement */
+}
+
+
+.certs-animation{
+    /* display:flex;
+    gap:10px;
+    animation: scrollCerts 40s linear infinite; */
+    display: inline-flex;
+    animation: scroll 45s linear infinite;     
+    gap:40px;
+    align-items:center;
+    height:500px;
+    will-change: transform;
+    transform: translateZ(0);
+    width:400px;border:1px solid white;
+
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-303%);
+    }
+}
+
+.certs-animation img{
+    width:420px;
+    height:420px;
+}
 .projects{
     position: relative;
     z-index: 2;
@@ -1678,10 +1716,6 @@ text-shadow:
 /*MEDIA QUERIES START HERE*/
 
 @media only screen and (max-width:1250px){
-    #me{
-        width:355px;
-        height:355px;
-    }
 
     .bottom-home{
         height:300px;
@@ -1702,6 +1736,30 @@ text-shadow:
 
     }
 
+}
+
+@media only screen and (max-height:560px){
+    .bottom-home{
+        height:260px;
+        
+    }
+
+    .intro h2{
+        font-size: 40px;
+    }
+
+    .intro p{
+        font-size:30px;
+    }
+
+    #me{
+        height:260px;
+        width:260px;
+    }
+
+    .cv-button, .about-me-button{
+        height:260px;
+    }
 }
 
 @media only screen and (max-width:1005px) {
@@ -1804,12 +1862,12 @@ footer {
     font-family: Arial, sans-serif; /* Font style */
 }
 
-@media only screen and (max-width:685px){
-    .cv-button, .about-me-button{
-        justify-content: end;
-        height:335px;
+@media only screen and (max-width:695px){
+    .intro{
+        width:100%;
     }
 }
+
 
 @media only screen and (max-width:615px){
     .form{
@@ -1863,23 +1921,59 @@ footer {
     .css{
         animation:CSSMoveSmartphone 12s linear infinite;
     }
+
+    .git, .vs-code, .npm, .postman, .microsoft, .ssms, .netbeans, .firebase, .responsive-design, .api, .problem-solving, .communication, .teamwork, .time-management, .adaptability, .emotional-intelligence, .attention-to-detail, .self-motivation{
+        width:100%;
+        font-size: 16px;
+    }
+
+
 }
 
+@media only screen and (max-width:495px){
+    .intro h2{
+        font-size: 40px;
 
+    }
+
+    .intro p{
+        font-size:30px;
+    }
+}
+
+@media only screen and (max-width:405px){
+    #experience, #education, #about-me2{
+        font-size:1rem;
+    }
+}
 
 @media only screen and (max-width:360px){
     .cv-button, .about-me-button{
         height:320px;
     }
+
+    .bottom-home{
+        width:100%;
+    }
+}
+
+@media only screen and (max-width:350px){
+    #experience, #education, #about-me2{
+        font-size:0.8rem;
+    }
 }
 
 @media only screen and (max-width:340px){
     .home h2{
-        font-size:35px;
+        font-size:38px;
     }
 
     .intro p{
-        font-size:23px;
+        font-size:25px;
+    }
+
+    #more-about, #transcripts, #reference-letters, #cv{
+        font-size: 10px;
     }
 }
 

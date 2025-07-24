@@ -1369,8 +1369,7 @@ text-shadow:
 }
 
 .ai-certs{
-    height:600px;
-    border:1px solid white;
+    height:800px;
     display:flex;
     flex-direction: column;
     overflow: hidden;
@@ -1384,14 +1383,14 @@ text-shadow:
     gap:10px;
     animation: scrollCerts 40s linear infinite; */
     display: inline-flex;
-    animation: scroll 45s linear infinite;     
+    animation: scroll 50s linear infinite ;     
     gap:40px;
     align-items:center;
     height:500px;
     will-change: transform;
     transform: translateZ(0);
-    width:400px;border:1px solid white;
-
+   
+    transition:ease-in-out;
 }
 
 @keyframes scroll {
@@ -1399,13 +1398,77 @@ text-shadow:
         transform: translateX(0);
     }
     100% {
-        transform: translateX(-303%);
+        transform: translateX(-408.8%);
     }
 }
 
+.certs-animation img:hover{
+    transform: scale(1.4);
+    box-shadow:
+        inset -1px -1px 2px rgba(255, 255, 255),  /* light reflection */
+        inset 1px 1px 3px rgba(0, 255, 255),      
+        0 0 10px rgba(0, 255, 255),              
+        0 8px 12px rgba(0, 0, 0 );     
+    cursor: zoom-in;
+
+}
+
 .certs-animation img{
-    width:420px;
-    height:420px;
+    width:400px;
+    height:400px;
+    transition: 0.5s ease-in-out;
+}
+
+#view-all{
+    color: #ffffff; /* Bright white base for max contrast */
+  font-weight: bold;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow:
+    0 0 5px #ffffff,
+    0 0 10px #00ffff,
+    0 0 20px #00ffff,
+    0 0 30px #ff00ff,
+    0 0 40px #ff00ff,
+    0 0 60px #ff00ff,
+    0 0 80px #ff00ff;
+  background: none;
+  cursor: pointer;
+  width:auto
+}
+
+#image-popup {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+#image-popup img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
+  
+}
+
+#close-popup {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  background-color: transparent;
+  transition: 0.3s ease;
+}
+
+#close-popup:hover{
+    color:lightblue;
+    transform: scale(1.1);
 }
 .projects{
     position: relative;

@@ -404,8 +404,69 @@ experienceBtn.addEventListener('click', function(){
     }
 })
     
-        
 
+const certsAnimation = document.getElementById('certs-animation');
+const certsImages = document.querySelectorAll('#certs-animation img');
+
+let animationFlag = true;
+
+certsAnimation.addEventListener('mouseover', function(){
+    animationFlag = false;
+
+    if(animationFlag===false){
+        certsAnimation.style.animationPlayState = 'paused';
+    }
+});
+
+certsAnimation.addEventListener('mouseout', function(){
+    animationFlag = true;
+
+    if(animationFlag===true){
+        certsAnimation.style.animationPlayState = 'running';
+    }
+});
+       
+
+const imagePopup = document.getElementById('image-popup');
+const popupImg = document.getElementById('popup-img');
+const closePopup = document.getElementById('close-popup');
+
+// Pause on hover of individual images
+certsImages.forEach(img => {
+  img.addEventListener('mouseover', () => {
+    certsAnimation.style.animationPlayState = 'paused';
+  });
+
+  img.addEventListener('mouseout', () => {
+    certsAnimation.style.animationPlayState = 'running';
+  });
+
+  img.addEventListener('click', () => {
+    popupImg.src = img.src;
+    imagePopup.style.display = 'flex';
+  });
+});
+
+// Close popup on click of close icon
+closePopup.addEventListener('click', () => {
+  imagePopup.style.display = 'none';
+});
+
+// Optional: Close popup when clicking outside the image
+imagePopup.addEventListener('click', (e) => {
+  if (e.target === imagePopup) {
+    imagePopup.style.display = 'none';
+  }
+});
+
+
+const popupVisible = window.getComputedStyle(imagePopup).display === 'flex';
+
+if (popupVisible) {
+  certsAnimation.style.animationPlayState = 'paused';
+} else {
+  certsAnimation.style.animationPlayState = 'running';
+}
 
 
 

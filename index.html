@@ -350,7 +350,7 @@ If you're looking for someone who's passionate about tech, eager to learn, and r
                     <div class="certificates-section">
                         <h2>Certificates</h2>
                         
-                        <div class="ai-certs">
+                        <div class="ai-certs" >
                             <h3>Tech Certificates</h3>
                             <div class="certs-animation" id="certs-animation">
                                 <img src="AI-certs/AIAndPublicHealth.png">
@@ -379,27 +379,51 @@ If you're looking for someone who's passionate about tech, eager to learn, and r
                                 <img src="AI-certs/S3.png">
                                 <img src="AI-certs/S4.png">
                             </div>
-                            <button class="button-with-border" id="view-all">View All</button>
+                            <div class="view-certs">
+                                <a href="certificates.html"><button class="button-with-border" id="view-all">View All</button></a>
+                            </div>
 
+                            <div class="ai-certs">
+                            <h3>Professional Development</h3>
+                            <div class="prof-animation" id="prof-animation">
+                                <img src="professional-development-certs/ActiveListening.png">
+                                <img src="professional-development-certs/EmotionalIntelligence.png">
+                                <img src="professional-development-certs/ProfessionalEmails.png">
+                                <img src="professional-development-certs/TimeManagement.png">
+                                <img src="professional-development-certs/verbalCommunication.png">
+                                <img src="professional-development-certs/voice.png">
+
+                                <img src="professional-development-certs/ActiveListening.png">
+                                <img src="professional-development-certs/EmotionalIntelligence.png">
+                                <img src="professional-development-certs/ProfessionalEmails.png">
+                                <img src="professional-development-certs/TimeManagement.png">
+                                <img src="professional-development-certs/verbalCommunication.png">
+                                <img src="professional-development-certs/voice.png">
+
+                            </div>
+                            <div class="view-certs">
+                                <a href="certificates.html"><button class="button-with-border" id="view-all">View All</button></a>
+                            </div>
+                        </div>
                         </div>
                     </div>
                     <div id="image-popup">
                         <span id="close-popup">&times;</span>
                         <img id="popup-img" src="" alt="Certificate Preview" />
                     </div>
-                </section><br><br><br>
+
+    
+                </section>
                 <section class="projects" id="projects-section">
                     <div class="projects-heading">
                         <h1>Projects</h1>
-                    </div>
+                    </div><br><br>
 
-                    <h2>Scroll to the left for more</h2>
-                    <h3>&larr;</h3>
 
-                    <div class="projects-slider">
+                     <div class="projects-slider">
                         <div class="project" >
-                            <video  autoplay loop muted>
-                                <source src="afa-vid.mp4" loading="lazy" type="video/mp4" width="250px">
+                            <video  autoplay loop muted  height="257px">
+                                <source src="afa-vid.mp4" loading="lazy" type="video/mp4" width="90%">
                                 <p>Your browser does not support HTML5 video.</p>
                             </video><br>
                             
@@ -419,14 +443,20 @@ If you're looking for someone who's passionate about tech, eager to learn, and r
                             <div class="project-description">
                                 <p>This is a Static business website me and a friend of mine was tasked to create for a security company. 
                                     My responsiblities were to make the whole site responsive on all screen sizes, to create an slider animation
-                                    on the home screen and to use javascript to create a hamburger button and make it functional.Live Link: <a href="https://hishaamluddy.github.io/ASAtest/" target="_blank">African Security Agency</a> </p>
+                                    on the home screen and to use javascript to create a hamburger button and make it functional.</p>
                             </div>
-                            <div class="learn-more" id="project-hover">
-                                <p>Learn More<br>Coming Soon</p>
+
+                            <div class="project-actions">
+                                <a href="https://hishaamluddy.github.io/ASAtest/" target="_blank" class="action-btn live-demo">
+                                    Live Demo
+                                </a>
+                                <button class="action-btn see-code">
+                                    See Code
+                                </button>
                             </div>
                         </div>
                         <div class="project">
-                            <img src="task-manager.webp" width="100%" height="257px"><br>
+                            <img src="task-manager.webp"  height="257px"><br>
                             <div class="languages-used">
                                 <div class="language1">
                                     <p>Java</p>
@@ -446,12 +476,18 @@ If you're looking for someone who's passionate about tech, eager to learn, and r
 
                                 </p>
                             </div>
-                            <div class="learn-more" id="project-hover">
-                                <p>Learn More<br>Coming Soon</p>
+
+                            <div class="project-actions">
+                                <!-- <a href="https://hishaamluddy.github.io/ASAtest/" target="_blank" class="action-btn live-demo">
+                                    Live Demo
+                                </a> -->
+                                <a href="https://github.com/Zahier-Claronino/TaskManager-JavaSwing" ><button class="action-btn see-code" id="see-code-btn">
+                                    See Code
+                                </button></a>
                             </div>
                         </div>
                         <div class="project">
-                            <img src="notesAppImage.jpg" width="100%" height="500px"><br>
+                          <img src="notesAppImage.jpg"  height="500px"><br>
 
                             <div class="languages-used">
                                 <div class="language1">
@@ -466,33 +502,30 @@ If you're looking for someone who's passionate about tech, eager to learn, and r
                             </div>
 
                             <div class="project-description">
-                                <p>This is a Notes application that im currently working on,<button id="more-info"><strong>Read More</strong></button><!-- that allows users to enter the title of the note and a description which 
-                                    saves it to the home page as you can see on the screen shot, zoom in to see it better or click anywhere on this project to see more.I
-                                    am also going to add a search function to search for any specific note by title. This project is teaching me alot about C# and XAML
-                                    Data binding, MVVM and UI Design.-->
-                                    </p>
-                            </div>
-
-                            <div class="more-info-section" id="more-info-section">
-                                <p id="notes-description">
-                                    This is a Notes application that im currently working on, that allows users to enter the title of the note and a description which 
+                                <p>This is a Notes application that im currently working on,that allows users to enter the title of the note and a description which 
                                     saves it to the home page as you can see on the screen shot, zoom in to see it better or click anywhere on this project to see more.I
                                     am also going to add a search function to search for any specific note by title. This project is teaching me alot about C# and XAML
                                     Data binding, MVVM and UI Design.
-                                </p>
+                                    </p>
                             </div>
-                            
-                            <a href="www.google.com"></a><div class="learn-more" id="project-hover">
-                                <p>Learn More<br> Coming Soon</p></a>
-                            </div></a>
 
-                            
+                            <div class="project-actions">
+                                <!-- <a href="https://hishaamluddy.github.io/ASAtest/" target="_blank" class="action-btn live-demo">
+                                    Live Demo
+                                </a> -->
+                                <a href="https://github.com/Zahier-Claronino/NotesApp" target="_blank"><button class="action-btn see-code" id="see-code-btn">
+                                    See Code
+                                </button></a>
+                            </div>
                         </div>
                         <div class="project">
-                            <video  autoplay loop muted>
-                                <source src="sptg-vd2.mp4" loading="lazy" type="video/mp4" width="250px" >
-                                <p>Your browser does not support HTML5 video.</p>
-                            </video><br>
+                            <div class="project-image">
+                                <video  autoplay loop muted height="257px">
+                                    <source src="sptg-vd2.mp4" type="video/mp4" loading="lazy"  width="80%"  >
+                                    <p>Your browser does not support HTML5 video.</p>
+                                </video>
+                            </div>
+                            
 
                             <div class="languages-used">
                                 <div class="language1">
@@ -507,18 +540,24 @@ If you're looking for someone who's passionate about tech, eager to learn, and r
                             </div>
 
                             <div class="project-description">
-                                <p>This is a website i developed for a startup transportation company called <strong>SPTG Transport</strong>which  essentially acts as a business landing page 
-                                    for the company. Live link here: <a href="https://www.sptgtransport.co.za/" target="_blank">SPTG Transport</a></p>
+                                <p>This is a website i developed for a startup transportation company called <strong>SPTG Transport</strong> which  essentially acts as a business landing page 
+                                    for the company.</p>
                             </div>
-                            <div class="learn-more" id="project-hover">
-                                <a href="sptg-learnMore.html" target="_blank">Learn More<br> Coming Soon</a>
+
+                            <div class="project-actions">
+                                <a href="https://sptgtransport.co.za" target="_blank" class="action-btn live-demo">
+                                    Live Demo
+                                </a>
+                                <a href="https://github.com/Zahier-Claronino/SPTG.com" target="_blank" ><button class="action-btn see-code" id="see-code-btn">
+                                    See Code
+                                </button></a>
                             </div>
                         </div>
                         <div class="project">
-                            <img src="chatbot.png" width="100%" height="257px"><br>
+                             <img src="chatbot.png" width="100%" height="257px"><br>
                             <div class="languages-used">
                                 <div class="language1">
-                                    <p>Dalogflow</p>
+                                    <p>Dialogflow</p>
                                 </div>
                                 <div class="language1">
                                     <p>HTML</p>
@@ -529,31 +568,30 @@ If you're looking for someone who's passionate about tech, eager to learn, and r
                             </div>
 
                             <div class="project-description">
-                                <p>This was a project that my group was assigned to do in my current learnership. It is a <strong>chat bot</strong>designed to teach users
+                                <p>This was a project that my group was assigned to do in my current learnership. It is a chat bot designed to teach users
                                     about the fundamntals of AI. It was a fun experience, we decided to use Dialogflow which is a no-code platform for creating chat bots.
                                     We had to train it on AI fundamentals, we also added some diagrams to help explain certain topics. Then we had to embed it into
-                                    an HTML file and create a simple user interface. heres the Live link to check out: <a href="https://zahier-claronino.github.io/ChatBot/" target="_blank">AEyeQ Chat Bot</a>
-
+                                    an HTML file and create a simple user interface.
 
                                 </p>
                             </div>
-                            <div class="learn-more" id="project-hover">
-                                <p>Learn More<br>Coming Soon</p>
+
+                            <div class="project-actions">
+                                <a href="https://zahier-claronino.github.io/ChatBot/" target="_blank" class="action-btn live-demo">
+                                    Live Demo
+                                </a>
+                                <a href="https://github.com/Zahier-Claronino/ChatBot" target="_blank" ><button class="action-btn see-code" id="see-code-btn">
+                                    See Code
+                                </button></a>
                             </div>
-                        </div>
                         
-                        <div class="project">
-                            
-                        </div>
-                        <div class="project">
-                            
                         </div>
 
                         
-                    </div>
+                    </div> 
 
                     
-                </section><br><br><br><br><br><br><br><br><br><br><br>
+                </section>
 
                 <section class="contact-section" id="contact-section">
                     <h1>Contact Me</h1>
@@ -609,5 +647,4 @@ If you're looking for someone who's passionate about tech, eager to learn, and r
     <script src="portfolio-javascript.js" ></script>
 </body>
 </html>
-
 

@@ -162,11 +162,11 @@ homeButton.addEventListener('click', function(){
     }
 });
 
-const projectsHover = document.getElementById('project-hover');
+// const projectsHover = document.getElementById('project-hover');
 
-projectsHover.addEventListener('click', function(){
-    console.log("clicked the project the commit finished.");
-})
+// projectsHover.addEventListener('click', function(){
+//     console.log("clicked the project the commit finished.");
+// })
 
 
 
@@ -220,9 +220,9 @@ window.addEventListener('load', function() {
     const loadingScreen = document.getElementById('loading-screen');
     const content = document.getElementById('content');
     
-  /*// Hide loading screen and display the content
+  // Hide loading screen and display the content
     loadingScreen.style.display = 'none';
-    content.style.display = 'block';*/
+    content.style.display = 'block';
     setTimeout(function() {
         loadingScreen.style.display = 'none';
       }, 500); // Hide after 3 seconds
@@ -259,6 +259,7 @@ document.addEventListener("DOMContentLoaded", function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible'); // Add class when section comes into view
+                sections.style.opacity = '1';
                 
             }else{
                 entry.target.classList.remove('visible');
@@ -295,28 +296,6 @@ document.addEventListener("DOMContentLoaded", function() {
     sections.forEach(section => {
         observer.observe(section);
     });
-});
-
-const ReadMoreButton = document.getElementById('more-info');
-const MoreInfo = document.getElementById('more-info-section');
-
-const NotesDescription = document.getElementById('notes-description');
-let flag = true;
-
-ReadMoreButton.addEventListener('click', function(){
-    if(flag === true){
-        flag = false;
-        MoreInfo.style.opacity = "1";
-        MoreInfo.style.zIndex = '4';
-        ReadMoreButton.innerText = "Read Less";
-    }
-    else if(flag === false){
-        flag = true;
-        MoreInfo.style.opacity = "0";
-        MoreInfo.style.zIndex = '2';
-        ReadMoreButton.innerText = "Read More";
-    }
-    
 });
 
 
@@ -408,29 +387,142 @@ experienceBtn.addEventListener('click', function(){
 const certsAnimation = document.getElementById('certs-animation');
 const certsImages = document.querySelectorAll('#certs-animation img');
 
-let animationFlag = true;
+const profAnimation = document.getElementById('prof-animation');
+const profImages = document.querySelectorAll('#prof-animation img'); // ✅ Corrected this line
 
-certsAnimation.addEventListener('mouseover', function(){
-    animationFlag = false;
-
-    if(animationFlag===false){
-        certsAnimation.style.animationPlayState = 'paused';
-    }
-});
-
-certsAnimation.addEventListener('mouseout', function(){
-    animationFlag = true;
-
-    if(animationFlag===true){
-        certsAnimation.style.animationPlayState = 'running';
-    }
-});
-       
 
 const imagePopup = document.getElementById('image-popup');
 const popupImg = document.getElementById('popup-img');
 const closePopup = document.getElementById('close-popup');
+let animationFlag = true;
 
+// certsAnimation.addEventListener('mouseover', function(){
+//     animationFlag = false;
+
+//     if(animationFlag===false){
+//         certsAnimation.style.animationPlayState = 'paused';
+//     }
+// });
+
+// certsAnimation.addEventListener('mouseout', function(){
+//     animationFlag = true;
+
+//     if(animationFlag===true){
+//         certsAnimation.style.animationPlayState = 'running';
+//     }
+// });
+
+
+profImages.forEach(img => {
+  img.addEventListener('mouseover', () => {
+    profAnimation.style.animationPlayState = 'paused';
+  });
+
+  img.addEventListener('mouseout', () => {
+    profAnimation.style.animationPlayState = 'running';
+  });
+  
+  img.addEventListener('click', () => {
+    popupImg.src = img.src;
+    imagePopup.style.display = 'flex';
+    profAnimation.style.animation = 'none';
+    const state = `${certsAnimation.style.animationPlayState}`;
+    console.log('image clicked' , ' image animation state: ', state);
+   
+    
+  });
+});
+       
+
+
+
+closePopup.addEventListener('click', () => {
+  imagePopup.style.display = 'none';
+  certsAnimation.style.animation = ' scroll 50s linear infinite';
+  certsAnimation.style.animationPlayState = 'running';
+
+});
+
+// Optional: Close popup when clicking outside the image
+imagePopup.addEventListener('click', (e) => {
+  if (e.target === imagePopup) {
+    imagePopup.style.display = 'none';
+
+  }
+});
+// Pause on hover of individual images
+profImages.forEach(img => {
+  img.addEventListener('mouseover', () => {
+    profAnimation.style.animationPlayState = 'paused';
+  });
+
+  img.addEventListener('mouseout', () => {
+    profAnimation.style.animationPlayState = 'running';
+  });
+  
+  img.addEventListener('click', () => {
+    popupImg.src = img.src;
+    imagePopup.style.display = 'flex';
+    profAnimation.style.animation = 'none';
+    const state = `${certsAnimation.style.animationPlayState}`;
+    console.log('image clicked' , ' image animation state: ', state);
+   
+    
+  });
+});
+
+closePopup.addEventListener('click', () => {
+  imagePopup.style.display = 'none';
+  profAnimation.style.animation = ' scroll 50s linear infinite';
+  profAnimation.style.animationPlayState = 'running';
+
+});
+
+
+
+
+
+//Tech certs
+certsImages.forEach(img => {
+  img.addEventListener('mouseover', () => {
+    certsAnimation.style.animationPlayState = 'paused';
+  });
+
+  img.addEventListener('mouseout', () => {
+    certsAnimation.style.animationPlayState = 'running';
+  });
+  
+  img.addEventListener('click', () => {
+    popupImg.src = img.src;
+    imagePopup.style.display = 'flex';
+    certsAnimation.style.animation = 'none';
+    const state = `${certsAnimation.style.animationPlayState}`;
+    console.log('image clicked' , ' image animation state: ', state);
+   
+    
+  });
+});
+
+
+
+
+
+
+// Close popup on click of close icon
+closePopup.addEventListener('click', () => {
+  imagePopup.style.display = 'none';
+  certsAnimation.style.animation = ' scroll 50s linear infinite';
+  certsAnimation.style.animationPlayState = 'running';
+
+});
+
+// Optional: Close popup when clicking outside the image
+imagePopup.addEventListener('click', (e) => {
+  if (e.target === imagePopup) {
+    imagePopup.style.display = 'none';
+
+  }
+});
 // Pause on hover of individual images
 certsImages.forEach(img => {
   img.addEventListener('mouseover', () => {
@@ -440,33 +532,43 @@ certsImages.forEach(img => {
   img.addEventListener('mouseout', () => {
     certsAnimation.style.animationPlayState = 'running';
   });
-
+  
   img.addEventListener('click', () => {
     popupImg.src = img.src;
     imagePopup.style.display = 'flex';
+    certsAnimation.style.animation = 'none';
+    const state = `${certsAnimation.style.animationPlayState}`;
+    console.log('image clicked' , ' image animation state: ', state);
+   
+    
   });
 });
 
+//this is where i am
 // Close popup on click of close icon
 closePopup.addEventListener('click', () => {
   imagePopup.style.display = 'none';
+  certsAnimation.style.animation = ' scroll 50s linear infinite';
+  certsAnimation.style.animationPlayState = 'running';
+
 });
 
 // Optional: Close popup when clicking outside the image
 imagePopup.addEventListener('click', (e) => {
   if (e.target === imagePopup) {
     imagePopup.style.display = 'none';
+
   }
 });
 
 
-const popupVisible = window.getComputedStyle(imagePopup).display === 'flex';
+// const popupVisible = window.getComputedStyle(imagePopup).display === 'flex';
 
-if (popupVisible) {
-  certsAnimation.style.animationPlayState = 'paused';
-} else {
-  certsAnimation.style.animationPlayState = 'running';
-}
+// if (popupVisible) {
+//   certsAnimation.style.animationPlayState = 'paused';
+// } else {
+//   certsAnimation.style.animationPlayState = 'running';
+// }
 
 
 

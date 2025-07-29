@@ -297,7 +297,6 @@ text-shadow:
     cursor: pointer;
     animation: none;
     background-color: transparent;
-    color:black;
     
 }
 
@@ -1501,7 +1500,7 @@ text-shadow:
 
 #close-popup {
   position: absolute;
-  top: 20px;
+  top: 100px;
   right: 40px;
   font-size: 3rem;
   color: white;

@@ -109,13 +109,20 @@ menuButton.addEventListener('click', function(){
 const homeButton = document.getElementById('home-btn');
 const aboutButton = document.getElementById('about');
 const projectsButton = document.getElementById('projects');
+const developmentToolkitButton = document.getElementById('development-toolkit');
+const softSkillsButton = document.getElementById('soft-skills');
+const certsButton = document.getElementById('certs');
 const contactButton = document.getElementById('contact');
+
 
 const AboutMeButton = document.getElementById('more-about');
 
 
 const AboutSection = document.getElementById('about-section');
 const ProjectsSection = document.getElementById('projects-section');
+const softwareSection = document.getElementById('software');
+const softSkillsSection = document.getElementById('soft');
+const certsSection = document.getElementById('certs-section')
 const ContactSection = document.getElementById('contact-section');
 
 
@@ -125,6 +132,8 @@ AboutMeButton.addEventListener('click', function(){
     AboutSection.scrollIntoView({behavior: "smooth"});
     
 });
+
+
 
 contactButton.addEventListener('click', function(){
     if(menuOpen){
@@ -148,6 +157,27 @@ projectsButton.addEventListener('click', function(){
         hideMenu();
         ProjectsSection.scrollIntoView({behavior: "smooth"});
     }
+});
+
+developmentToolkitButton.addEventListener('click', function(){
+
+    hideMenu();
+    softwareSection.scrollIntoView({behavior: "smooth"});
+    
+});
+
+softSkillsButton.addEventListener('click', function(){
+
+    hideMenu();
+    softSkillsSection.scrollIntoView({behavior: "smooth"});
+    
+});
+
+certsButton.addEventListener('click', function(){
+
+    hideMenu();
+    certsSection.scrollIntoView({behavior: "smooth"});
+    
 });
 
 const projects2Button = document.getElementById('projects2');

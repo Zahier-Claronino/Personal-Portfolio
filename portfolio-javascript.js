@@ -104,6 +104,9 @@ menuButton.addEventListener('click', function(){
 
 });
 
+
+gsap.registerPlugin(ScrollToPlugin); // If using CDN
+
 /*Navigation buttons functions*/
 
 const homeButton = document.getElementById('home-btn');
@@ -124,73 +127,128 @@ const softwareSection = document.getElementById('software');
 const softSkillsSection = document.getElementById('soft');
 const certsSection = document.getElementById('certs-section')
 const ContactSection = document.getElementById('contact-section');
+function scrollToSection(target) {
+  gsap.to(window, {
+    duration: 1.7,
+    scrollTo: {
+      y: target,
+      offsetY: 20 // offset for fixed headers
+    },
+    ease: "expo.inOut"
+  });
+}
 
-
-AboutMeButton.addEventListener('click', function(){
-
-    hideMenu();
-    AboutSection.scrollIntoView({behavior: "smooth"});
-    
+// Handlers
+AboutMeButton.addEventListener('click', () => {
+  hideMenu();
+  scrollToSection(AboutSection);
 });
 
-
-
-contactButton.addEventListener('click', function(){
-    if(menuOpen){
-        hideMenu();
-        ContactSection.scrollIntoView({behavior: "smooth"});
-    }
+aboutButton.addEventListener('click', () => {
+  if (menuOpen) hideMenu();
+  scrollToSection(AboutSection);
 });
 
-aboutButton.addEventListener('click', function(){
-    if(menuOpen){
-        hideMenu();
-        AboutSection.scrollIntoView({behavior: "smooth"});
-        
-    }
+projectsButton.addEventListener('click', () => {
+  if (menuOpen) hideMenu();
+  scrollToSection(ProjectsSection);
 });
 
-
-
-projectsButton.addEventListener('click', function(){
-    if(menuOpen){
-        hideMenu();
-        ProjectsSection.scrollIntoView({behavior: "smooth"});
-    }
+developmentToolkitButton.addEventListener('click', () => {
+  hideMenu();
+  scrollToSection(softwareSection);
 });
 
-developmentToolkitButton.addEventListener('click', function(){
-
-    hideMenu();
-    softwareSection.scrollIntoView({behavior: "smooth"});
-    
+softSkillsButton.addEventListener('click', () => {
+  hideMenu();
+  scrollToSection(softSkillsSection);
 });
 
-softSkillsButton.addEventListener('click', function(){
-
-    hideMenu();
-    softSkillsSection.scrollIntoView({behavior: "smooth"});
-    
+certsButton.addEventListener('click', () => {
+  hideMenu();
+  scrollToSection(certsSection);
 });
 
-certsButton.addEventListener('click', function(){
-
-    hideMenu();
-    certsSection.scrollIntoView({behavior: "smooth"});
-    
+contactButton.addEventListener('click', () => {
+  if (menuOpen) hideMenu();
+  scrollToSection(ContactSection);
 });
 
 const projects2Button = document.getElementById('projects2');
-projects2Button.addEventListener('click', function(){
-    ProjectsSection.scrollIntoView({behavior: "smooth"});;
-})
-
-homeButton.addEventListener('click', function(){
-    if(menuOpen){
-        hideMenu();
-        home.scrollIntoView({behavior: "smooth"});
-    }
+projects2Button.addEventListener('click', () => {
+  scrollToSection(ProjectsSection);
 });
+
+homeButton.addEventListener('click', () => {
+  if (menuOpen) hideMenu();
+  scrollToSection(home);
+});
+
+// AboutMeButton.addEventListener('click', function(){
+
+//     hideMenu();
+//     AboutSection.scrollIntoView({behavior: "smooth"});
+    
+// });
+
+
+
+// contactButton.addEventListener('click', function(){
+//     if(menuOpen){
+//         hideMenu();
+//         ContactSection.scrollIntoView({behavior: "smooth"});
+//     }
+// });
+
+// aboutButton.addEventListener('click', function(){
+//     if(menuOpen){
+//         hideMenu();
+//         AboutSection.scrollIntoView({behavior: "smooth"});
+        
+//     }
+// });
+
+
+
+// projectsButton.addEventListener('click', function(){
+//     if(menuOpen){
+//         hideMenu();
+//         ProjectsSection.scrollIntoView({behavior: "smooth"});
+//     }
+// });
+
+// developmentToolkitButton.addEventListener('click', function(){
+
+//     hideMenu();
+//     softwareSection.scrollIntoView({behavior: "smooth"});
+    
+// });
+
+// softSkillsButton.addEventListener('click', function(){
+
+//     hideMenu();
+//     softSkillsSection.scrollIntoView({behavior: "smooth"});
+    
+// });
+
+// certsButton.addEventListener('click', function(){
+
+//     hideMenu();
+//     certsSection.scrollIntoView({behavior: "smooth"});
+    
+// });
+
+
+// projects2Button.addEventListener('click', function(){
+//     ProjectsSection.scrollIntoView({behavior: "smooth"});;
+// })
+
+// homeButton.addEventListener('click', function(){
+//     if(menuOpen){
+//         hideMenu();
+//         home.scrollIntoView({behavior: "smooth"});
+//     }
+// });
 
 // const projectsHover = document.getElementById('project-hover');
 

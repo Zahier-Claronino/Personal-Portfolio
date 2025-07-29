@@ -1656,7 +1656,7 @@ opacity: 0.6;
     animation: float 6s ease-in-out infinite;
     cursor: pointer;
     overflow: hidden;
-    min-height:650px;
+    min-height:700px;
 }
 
 /* Individual float animations with different timings */
@@ -1717,7 +1717,7 @@ opacity: 0.6;
 .project img {
     width: 100%;
     height: 250px;
-    object-fit: cover;
+    object-fit:contain;
     border-radius: 20px;
     margin-bottom: 25px;
     transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
@@ -1862,11 +1862,17 @@ opacity: 0.6;
     justify-content: center;
 }
 
-.project-actions a, .project-actions button{
+.project-actions button{
     height:50px;
     text-decoration: none;
+    
+    width:180px;
 
 
+}
+
+.project-actions a{
+    text-decoration: none;
 }
 
 
@@ -1887,7 +1893,11 @@ opacity: 0.6;
     transform-style: preserve-3d;
     position: relative;
     overflow: hidden;
+    
+    
 }
+
+
 
 
 #see-code-btn{
@@ -2063,8 +2073,18 @@ opacity: 0.6;
 }
 
 .socials h2, .form h2{
-    color:white;
-    font-family: monospace;
+    color: #00d1e6; /* slightly darker electric cyan */
+
+    background: linear-gradient(to right, #00d1e6, #00b8e6, #009fd6);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    text-shadow:
+    0 0 2px #00d1e6,
+    0 0 4px #00b8e6,
+    0 0 8px #009fd6;
+    font-family: 'Orbitron', sans-serif;
     font-size: 30px;
 }
 
@@ -2085,7 +2105,7 @@ opacity: 0.6;
 
 .socials button{
     color:white;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Orbitron', sans-serif;
     font-size:19px;
     background-color: transparent;
     border:none;
@@ -2109,6 +2129,7 @@ opacity: 0.6;
     border: none;
     color:white;
     font-size: 16px;
+     font-family: 'Orbitron', sans-serif;
 }
 
 .form form input::placeholder, .form form textarea::placeholder{
@@ -2128,6 +2149,7 @@ opacity: 0.6;
     color:white;
     background-color: rgba(47, 79, 79, 0.8);
     border:none;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .form form button{
@@ -2138,6 +2160,7 @@ opacity: 0.6;
     border:none;
     font-size:16px;
     transition: 0.3s ease-in-out;
+    font-family: 'Orbitron', sans-serif;
 }
 
 .form form button:hover{

@@ -218,11 +218,11 @@ document.querySelector("#contactForm").addEventListener("submit", function (even
 window.addEventListener('load', function() {
     // Hide the loading screen after the page is loaded
     const loadingScreen = document.getElementById('loading-screen');
-    const content = document.getElementById('content');
+    // const content = document.getElementById('content');
     
   // Hide loading screen and display the content
     loadingScreen.style.display = 'none';
-    content.style.display = 'block';
+    // content.style.display = 'block';
     setTimeout(function() {
         loadingScreen.style.display = 'none';
       }, 500); // Hide after 3 seconds
@@ -259,7 +259,7 @@ document.addEventListener("DOMContentLoaded", function() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible'); // Add class when section comes into view
-                sections.style.opacity = '1';
+                // sections.style.opacity = '1';
                 
             }else{
                 entry.target.classList.remove('visible');

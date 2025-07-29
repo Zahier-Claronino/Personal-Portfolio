@@ -313,7 +313,7 @@ window.addEventListener('load', function() {
     // content.style.display = 'block';
     setTimeout(function() {
         loadingScreen.style.display = 'none';
-      }, 500); // Hide after 3 seconds
+      }, 1000); // Hide after 3 seconds
   });
 
 

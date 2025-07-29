@@ -2180,7 +2180,7 @@ opacity: 0.6;
     justify-content: center;
     align-items: center;
     z-index: 9999; /* Ensure it covers everything else */
-    background-image: url("loading.gif");
+    background-image: url("loading2.gif");
     background-position: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;

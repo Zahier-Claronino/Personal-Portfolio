@@ -469,7 +469,7 @@ text-shadow:
     height: 12px;
     background: radial-gradient(circle at 30% 30%, #ffffff 0%, #ccf2ff 40%, #00ffff 100%);
     border-radius: 50%;
-    animation: floatUp 20s infinite ease-in-out, bubbleTilt 3s infinite ease;
+    animation: floatUp 10s infinite ease-in-out, bubbleTilt 3s infinite ease;
     border: 2px solid lightblue;
     z-index: 2;
 
@@ -1651,7 +1651,7 @@ text-shadow:
         0 20px 40px rgba(0, 0, 0, 0.3),
         0 0 0 1px rgba(255, 255, 255, 0.05),
         inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    animation: float 6s ease-in-out infinite;
+    animation: float 3s ease-in-out infinite;
     cursor: pointer;
     overflow: hidden;
     min-height:700px;
@@ -1662,13 +1662,13 @@ text-shadow:
         transform: translateY(0px) rotateX(0deg) rotateY(0deg); 
     }
     25% { 
-        transform: translateY(-10px) rotateX(1deg) rotateY(1deg); 
+        transform: translateY(-5px) rotateX(1deg) rotateY(1deg); 
     }
     50% { 
-        transform: translateY(-15px) rotateX(0deg) rotateY(2deg); 
+        transform: translateY(-10px) rotateX(0deg) rotateY(2deg); 
     }
     75% { 
-        transform: translateY(-10px) rotateX(-1deg) rotateY(1deg); 
+        transform: translateY(-5px) rotateX(-1deg) rotateY(1deg); 
     }
 }
 

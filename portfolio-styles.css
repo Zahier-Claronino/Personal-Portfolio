@@ -772,12 +772,12 @@ text-shadow:
   mask-repeat: no-repeat;
 
   transition: background-color 0.5s ease;
-  transition: 0.15s ease-in-out;
+  transition: 0.1s ease-in-out;
 }
 
 .capaciti:hover, .CTU:hover, .school:hover {
   background: linear-gradient(135deg, #1f005c, #5b0060, #870160, #ac255e, #ca485c, #e16b5c, #f39060);
-  transform: skewX(8.5deg);
+  transform: skewX(5deg);
 }
 
 .capaciti::after, .CTU:after, .school::after {
@@ -879,7 +879,6 @@ text-shadow:
     display:flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
     max-width: 100%;
     width:550px;
     text-align: center;
@@ -1658,13 +1657,6 @@ text-shadow:
     min-height:700px;
 }
 
-/* Individual float animations with different timings */
-.project:nth-child(1) { animation-delay: 0s; }
-.project:nth-child(2) { animation-delay: -2s; }
-.project:nth-child(3) { animation-delay: -4s; }
-.project:nth-child(4) { animation-delay: -1s; }
-.project:nth-child(5) { animation-delay: -3s; }
-
 @keyframes float {
     0%, 100% { 
         transform: translateY(0px) rotateX(0deg) rotateY(0deg); 
@@ -1673,7 +1665,7 @@ text-shadow:
         transform: translateY(-10px) rotateX(1deg) rotateY(1deg); 
     }
     50% { 
-        transform: translateY(-20px) rotateX(0deg) rotateY(2deg); 
+        transform: translateY(-15px) rotateX(0deg) rotateY(2deg); 
     }
     75% { 
         transform: translateY(-10px) rotateX(-1deg) rotateY(1deg); 
@@ -1690,7 +1682,7 @@ text-shadow:
     background: linear-gradient(135deg, rgba(79, 195, 247, 0.1) 0%, rgba(255, 107, 107, 0.1) 100%);
     border-radius: 25px;
     opacity: 0;
-    transition: opacity 0.6s ease;
+    transition: opacity 0.4s ease;
     z-index: -1;
 }
 
@@ -1707,11 +1699,6 @@ text-shadow:
     opacity: 1;
 }
 
-.project:hover video,
-.project:hover img {
-    transform: scale(1.5) translateZ(20px);
-}
-
 .project video,
 .project img {
     width: 100%;
@@ -1719,7 +1706,7 @@ text-shadow:
     object-fit:contain;
     border-radius: 20px;
     margin-bottom: 25px;
-    transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     transform-style: preserve-3d;
 }
@@ -1745,7 +1732,6 @@ text-shadow:
     transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
     border: 1px solid rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(10px);
-    transform: translateZ(5px);
 }
 
 .language1:hover {
@@ -1831,7 +1817,7 @@ text-shadow:
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.05);
     display: none;
-    animation: slideIn 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    animation: slideIn 0.3s cubic-bezier(0.23, 1, 0.32, 1);
     transform: translateZ(5px);
     backdrop-filter: blur(10px);
 }
@@ -1856,7 +1842,6 @@ text-shadow:
 .project-actions {
     display: flex;
     gap: 15px;
-    transform: translateZ(15px);
     width:100%;
     justify-content: center;
 }
@@ -2017,14 +2002,9 @@ text-shadow:
 }
 
 .project {
-    animation: fadeInUp 0.8s cubic-bezier(0.23, 1, 0.32, 1) forwards, float 6s ease-in-out infinite;
+    animation: fadeInUp 0.3s cubic-bezier(0.23, 1, 0.32, 1) forwards, float 6s ease-in-out infinite;
 }
 
-.project:nth-child(1) { animation-delay: 0.1s, 0s; }
-.project:nth-child(2) { animation-delay: 0.2s, -2s; }
-.project:nth-child(3) { animation-delay: 0.3s, -4s; }
-.project:nth-child(4) { animation-delay: 0.4s, -1s; }
-.project:nth-child(5) { animation-delay: 0.5s, -3s; }
 
 
 .contact-section{
@@ -2034,7 +2014,7 @@ text-shadow:
     min-height:100vh;
     width:100%;
     overflow-y: auto;
-    transition: opacity 1s ease, transform 1s ease;
+    transition: opacity 0.5s ease, transform 1s ease;
 }
 
 .contact-section.visible{

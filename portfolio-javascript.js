@@ -354,7 +354,7 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
     }, {
-        threshold: 0.15// Trigger when 50% of the section is in view
+        threshold: 0.05// Trigger when 50% of the section is in view
     });
 
     // Observe each section

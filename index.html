@@ -430,10 +430,21 @@
                      <div class="projects-slider">
 
                         <div class="project" >
-                            <video  autoplay loop muted  height="270px">
-                                <source src="recipeGenerator.mp4" loading="lazy" type="video/mp4" width="100%">
-                                <p>Your browser does not support HTML5 video.</p>
-                            </video><br>
+                            <video 
+                                autoplay 
+                                loop 
+                                muted 
+                                playsinline 
+                                preload="metadata" 
+                                poster="recipeGenerator-preview.jpg" 
+                                height="270" 
+                                style="width: 100%; display: block;">
+                                
+                                <source src="recipeGenerator.webm" type="video/webm">
+                                <source src="recipeGenerator.mp4" type="video/mp4">
+
+                                Your browser does not support HTML5 video.
+                                </video>
                             <h2>AI Recipe Generator</h2><br>
 
                             <div class="languages-used">

@@ -134,11 +134,11 @@ nav{
     font-family: 'Orbitron', sans-serif; /* retro-futuristic arcade font */
 color: #00ffff; /* electric cyan */
 text-shadow:
-  0 0 5px #00ffff,
-  0 0 10px #00ffff,
-  0 0 20px #00e5ff,
-  0 0 40px #00b3ff,
-  0 0 80px #0099ff;
+  0 0 1px #00ffff,
+  0 0 2px #00ffff,
+  0 0 3px #00e5ff,
+  0 0 4px #00b3ff,
+  0 0 5px #0099ff;
     font-size:45px;
     line-height: 1;
     text-align: center;
@@ -2186,6 +2186,15 @@ text-shadow:
 
 /*MEDIA QUERIES START HERE*/
 
+@media only screen and (max-idth:1360px){
+    .project{
+         height:640px;
+       /* min-width:250px; */
+        width:80%;
+    }
+
+}
+
 @media only screen and (max-width:1250px){
 
     .bottom-home{
@@ -2289,6 +2298,12 @@ text-shadow:
         width:100%;
     }
 
+    .bubble{
+        width:6px;
+        height:6px;
+    }
+
+
 
     /*.about-me-button, .cv-button{
     
@@ -2314,8 +2329,9 @@ text-shadow:
     }
 
     .project{
-        height:640px;
-        min-width:300px;
+         height:640px;
+       /* min-width:250px; */
+        width:100%;
     }
 
     .learn-more{
